@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Александр   Сергеевич](https://up.htmlacademy.ru/adaptive/18/user/796521).
-* Наставник: [Дмитрий Железцов](https://htmlacademy.ru/profile/sench).
+* Наставник: [Дмитрий   Железцов](https://htmlacademy.ru/profile/sench).
 
 ---
 
