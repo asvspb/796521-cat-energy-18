@@ -6,32 +6,32 @@
 </head>
 <body>
 <!-- Заголовок страницы -->
-<header class="page-header">
-  <a class="page-header__logo">
-    <img class="page-header__logo-image" src="https://via.placeholder.com/150x150" alt="Логотип Кэт энерджи">
+<header class="header">
+  <a class="header__logo logo">
+    <img class="logo__image" src="https://via.placeholder.com/150x150" alt="Логотип Кэт энерджи">
   </a>
-  <nav class="main-nav">
-    <button type="button" class="main-nav__toggle">
-      <img src="" alt="Мобильное меню">
+  <nav class="header_nav nav">
+    <button class="nav__toggle" type="button">
+      <img  class="nav__image" src="" alt="Мобильное меню">
     </button>
-    <div class="main-nav__wrapper">
-      <ul class="main-nav__list">
-        <li class="main-nav__item">
-          <a class="main-nav__link">Главная</a>
+    <div class="nav__wrapper">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link">Главная</a>
         </li>
-        <li class="main-nav__item">
-          <a href="catalog.html" class="menu__link">Каталог продукции</a>
+        <li class="nav__item">
+          <a href="catalog.html" class="nav__link">Каталог продукции</a>
         </li>
-        <li class="main-nav__item">
-          <a href="#" class="menu__link">Подбор программы</a>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Подбор программы</a>
         </li>
       </ul>
     </div>
   </nav>
 </header>
 <!--Разметка основных блоков-->
-<main class="page-main">
-  <section class="catalog">
+<main class="main">
+  <section class="main__catalog catalog">
     <h1 class="catalog__title">Каталог продукции</h1>
     <ul class="catalog__list products">
       <li class="products__item">
@@ -146,7 +146,7 @@
       </li>
     </ul>
   </section>
-  <section class="extra-catalog container">
+  <section class="main__container extra-catalog">
     <h2 class="extra-catalog__title">Дополнительные товары</h2>
     <ul class="extra-catalog__list extra-products">
       <li class="extra-products__item">
@@ -183,7 +183,7 @@
       </li>
     </ul>
   </section>
-  <section class="special-offer">
+  <section class="main__special-offer special-offer">
     <p class="special-offer__text">Закажите все и получите чехол для кота в подарок!</p>
   </section>
 </main>
@@ -194,8 +194,8 @@
       <img src="" alt="Местонахождение Кэт энерджи на карте" class="contacts__map">
     </div>
     <div class="page-footer__wrapper">
-      <a href="index.html" class="page-footer__logo">
-        <img src="" alt="Логотип Кэт энерджи">
+      <a class="page-footer__logo" href="index.html">
+        <img class="page-footer__image" src="" alt="Логотип Кэт энерджи">
       </a>
       <ul class="page-footer__social social">
         <li class="social__item"><a href="https://vk.com" class="social__link">Вконтакте</a></li>
@@ -204,8 +204,8 @@
       </ul>
       <div class="page-footer__develop develop">
         <p class="develop__text">HTML Academy</p>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="develop__link">
-          <img src="" alt="Логотип HTML Academy" class="develop__logo">
+        <a class="develop__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img  class="develop__logo" src="" alt="Логотип HTML Academy">
         </a>
       </div>
     </div>
