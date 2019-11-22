@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Oswald';
+  src: url('/source/fonts/oswaldmedium.woff') format('woff'),
+       url('/source/fonts/oswaldmedium.woff2') format('woff2');
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('/source/fonts/oswaldregular.woff') format('woff'),
+       url('/source/fonts/oswaldregular.woff2') format('woff2');
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+
