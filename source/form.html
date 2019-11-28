@@ -1,93 +1,66 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-  <meta charset="utf-8">
-  <title>HTML Academy: Кэт энерджи</title>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Кэт энерджи</title>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
   <body>
 
-    <!-- Навигация -->
-    <header class="page-header container">
-      <div class="page-header__logo logo nav-toggle">
-        <a class="logo">
-          <img class="logo__logo-image" src="https://via.placeholder.com/33x38" alt="Логотип Cat Energy">
-          <img class="logo__title-image" src="https://via.placeholder.com/101x18" alt="Название Cat Energy">
-        </a>
-        <button class="nav-toggle nav-toggle--open" type="button">= меню =</button>
-      </div>
-      <nav class="page-header__main-nav main-nav">
-        <ul class="main-nav__menu-list menu-list">
-          <li><a class="menu-list__item">Главная</a></li>
-          <li><a class="menu-list__item" href="catalog.html">Каталог продукции</a></li>
-          <li><a class="menu-list__item" href="form.html">Подбор программы</a></li>
+    <header class="header">
+      <a class="header__link">
+        <img class="header__logo-image" src="https://via.placeholder.com/150x150" width="191" height="39" alt="Cat Energy">
+      </a>
+      <button class="header__toggle" type="button">Открыть меню</button>
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item nav__item--active">
+            <a class="nav__link" href="index.html">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link">Подбор программы</a>
+          </li>
         </ul>
       </nav>
     </header>
 
-<!-- Основное содержание -->
+    <footer class="footer">
+      <div class="footer__section logo">
+        <a class="logo__link">
+          <img class="logo__sign" src="https://via.placeholder.com/150x150" width="128" height="24" alt="Логотип Cat Energy">
+        </a>
+      </div>
+      <div class="footer__section social">
+        <ul class="social__list">
+          <li class="social__item">
+            <a class="social__link social__link--vkontakte" href="#" aria-label="Мы в ВКонтакте">
+              <img class="social__icon" src="https://via.placeholder.com/150x150" width="25" height="25" alt="ВКонтакте">
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--instagram" href="#" aria-label="Мы в Инстаграме">
+              <img class="social__icon" src="https://via.placeholder.com/150x150" width="25" height="25" alt="Инстаграм">
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--facebook" href="#" aria-label="Мы в Фейсбуке">
+              <img class="social__icon" src="https://via.placeholder.com/150x150" width="25" height="25" alt="Фейсбук">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__section copyright">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          HTML Academy
+          <span class="copyright__sign">
+              <img class="copyright__logo-image" src="https://via.placeholder.com/150x150" width="27" height="34" alt="Логотип HTML Academy">
+          </span>
+        </a>
+      </div>
+    </footer>
 
-<main class="page-main container">
-    <h1 class="page-main__title">Подбор программы</h1>
-    <p class="page-main__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
-    <form class="params page-main__params" action="https://echo.htmlacademy.ru" method="POST">
-      <fieldset class="params__fieldset">
-        <label class="params__label">Имя:*<input class="params__text-field" type="text" name="nikname" placeholder="Барсик"></label>
-        <label class="params__label">Вес (кг):*<input class="params__number-field" type="number" name="weight" placeholder="7"></label>
-        <label class="params__label">Возраст (лет):<input class="params__number-field" type="number" name="age" placeholder="7"></label>
-      </fieldset>
-      <fieldset class="params__fieldset">
-        <label class="params__label"><input class="params__radio-btn" type="radio" name="target">Похудение</label>
-        <label class="params__label"><input class="params__radio-btn" type="radio" name="target">Набор массы</label>
-        <label class="params__label"><input class="params__radio-btn" type="radio" name="target">Не знаю (нужен ваш совет)</label>
-      </fieldset>
-      <fieldset class="params__fieldset">
-        <legend class="params__legend">Контактные данные (владельца кота)</legend>
-        <label class="params__label">e-mail:*<input class="params__email-field" type="email" name="email" placeholder="kuklachev@gmail.com"></label>
-        <label class="params__label">Телефон:*<input class="params__phone-field" type="text" name="phone" placeholder="8 (960) 900-60-90"></label>
-      </fieldset>
-      <fieldset class="params__fieldset">
-        <legend class="params__legend">Комментарий</legend>
-        <label class="params__label"><textarea class="params__textarea-field" name="comments" cols="30" rows="10"
-            placeholder="Расскажите обо всех повадках кота"></textarea></label>
-      </fieldset>
-      <fieldset class="params__fieldset">
-        <legend class="params__legend">Дополнительно</legend>
-        <label class="params__label"><input class="params__checkbox" type="checkbox" name="extra-choice-1">Сахарозаменитель</label>
-        <label class="params__label"><input class="params__checkbox" type="checkbox" name="extra-choice-2">Питьевая вода</label>
-        <label class="params__label"><input class="params__checkbox" type="checkbox" name="extra-choice-3">Молоко</label>
-        <label class="params__label"><input class="params__checkbox" type="checkbox" name="extra-choice-4">Витамины</label>
-      </fieldset>
-      <button class="common-btn params__submit-btn" type="submit">Отправить заявку</button>
-      <small class="params__text-small">* - Обязательные поля</small>
-    </form>
-  </main>
-
-  <aside class="contacts container">
-    <h2 class="visually-hidden">Контакты</h2>
-    <div class="contacts__wrapper">
-      <b class="contacts__prompt">Приглашаем к сотрудничеству дилеров!</b>
-      <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-    </div>
-    <img class="contacts__map" src="https://via.placeholder.com/320x362" width="320" height="362" alt="Карта">
-  </aside>
-
-<!-- Подвал -->
-
-  <footer class="page-footer container">
-    <div class="page-footer__wrapper">
-      <a class="page-footer__logo footer-logo">
-        <img class="footer-logo__image" src="https://via.placeholder.com/128x24" width="128" height="24" alt="Название Cat Energy">
-      </a>
-      <ul class="page-footer__social social">
-        <li class="social__item"><a class="social__link social__link--vk" href="#">Вконтакте</a></li>
-        <li class="social__item"><a class="social__link social__link--insta" href="#">Инстраграм</a></li>
-        <li class="social__item"><a class="social__link social__link--fb" href="#">Фэйсбук</a></li>
-      </ul>
-      <address class="page-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-      </address>
-    </div>
-  </footer>
   </body>
 </html>
