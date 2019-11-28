@@ -1,0 +1,28 @@
+.advantages {
+  background-color: $white;
+}
+
+.advantages__header,
+.advantages__description {
+  font-weight: $font-weight-regular;
+  text-align: $text-align-left;
+}
+
+.advantages__header {
+  font-size: $font-size-xxl;
+  line-height: $line-height-xxl;
+  color: $black-one;
+}
+
+.advantages__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.advantages__description {
+  font-family: $font-family-secondary;
+  font-size: $font-size-s;
+  line-height: $line-height-s;
+  color: $grayish-brown;
+}
