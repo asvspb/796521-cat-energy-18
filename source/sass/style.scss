@@ -16,8 +16,8 @@
   font-weight: 500;
 }
 
-@import "variables.scss";
-@import "base.scss";
+@import "features/variables.scss";
+@import "features/base.scss";
 @import "blocks/header.scss";
 @import "blocks/nav.scss";
 @import "blocks/main.scss";
