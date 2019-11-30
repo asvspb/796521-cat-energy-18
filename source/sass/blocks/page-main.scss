@@ -1,0 +1,40 @@
+.page-main__title {
+  @include text-parameter(36px, 1.67, $color-subtitle, 400);
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.page-main__subtitle {
+  @include text-parameter(24px, 1, $color-subtitle, 400);
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.page-main__text {
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+.page-main__action {
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.page-main__action_title {
+  @include text-parameter(16px, 1.25, $color-element, 400);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.page-main__additional-products {
+  margin-right: 20px;
+  margin-left: 20px;
+}

@@ -1,0 +1,22 @@
+.page-header__preview {
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-color: $color-main;
+  background-repeat: no-repeat;
+  padding-top: 30px;
+}
+
+.page-header__preview-title {
+  @include text-parameter(36px, 1, $color-element, 400);
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.page-header__preview-subtitle {
+  text-transform: uppercase;
+
+  @include text-parameter(14px, 1, $color-element, 400);
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+}

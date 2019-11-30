@@ -1,0 +1,65 @@
+.example {
+  background-color: $color-secondary;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  margin-top: 40px;
+}
+
+.example__wrapper {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.example__title {
+  @include text-parameter(36px, 1.67, $color-subtitle, 400);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.example__text {
+  @include text-parameter(14px, 1.29, $color-text, 400);
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.example__fact-item {
+  border: 1px solid $color-border;
+  border-radius: 3px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  @include text-parameter(24px, 1, $color-subtitle, 400);
+  width: 124px;
+  height: 56px;
+  text-transform: uppercase;
+  position: relative;
+  text-align: center;
+}
+
+.example__fact-comment {
+  @include text-parameter(12px, 1, $color-text, 400);
+  text-transform: lowercase;
+  position: absolute;
+  bottom: -15px;
+  background-color: $color-secondary;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.example__fact-total-item {
+  @include text-parameter(14px, 1.43, $color-subtitle, 400);
+  text-transform: uppercase;
+  padding-right: 0;
+  padding-left: 0;
+  padding-top: 40px;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.example__verge {
+  text-transform: uppercase;
+
+  @include text-parameter(16px, 1.25, $color-subtitle, 400);
+}

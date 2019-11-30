@@ -1,0 +1,42 @@
+.product-card {
+  border-top: 1px solid $color-border;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  &:last-of-type {
+    border-bottom: 1px solid $color-border;
+  }
+
+  &--big-card {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  &--small-card {
+    padding-top: 14px;
+    padding-bottom: 17px;
+  }
+}
+
+.product-card__title {
+  @include text-parameter(16px, 1.25, $color-subtitle, 400);
+  text-transform: uppercase;
+}
+
+.product-card__description {
+  @include text-parameter(12px, 1.33, $color-text, 400);
+
+  &--big-card {
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
+
+  &--small-card {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+.product-card__characteristic {
+  padding: 0;
+}
