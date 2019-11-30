@@ -1,13 +1,11 @@
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+body {
+  background-color: #ffffff;
+  font-family: "Oswald", "Arial", sans-serif;
+
+  @include text-parameter(14px, 1.29, $color-text, 400);
 }
+
+
 
 a {
   text-decoration: none;
@@ -16,12 +14,4 @@ a {
 img {
   max-width: 100%;
   height: auto;
-}
-
-body {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: $font-size-s;
-  font-weight: $font-weight-regular;
-  color: $black-zero;
-  background-color: $white;
 }
