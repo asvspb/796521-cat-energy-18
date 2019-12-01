@@ -1,0 +1,235 @@
+.form-feedback__list {
+  padding-left: 0;
+}
+
+.form-feedback__item {
+  list-style: none;
+
+  &:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+}
+
+.form-feedback__subtitle-wrapper {
+  border-bottom: 3px solid $color-main;
+  width: 100%;
+  position: relative;
+  height: 24px;
+  margin-bottom: 38px;
+}
+
+.form-feedback__subtitle {
+  @include text-parameter(24px, 1, $color-subtitle-lighter, 400);
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  background: $color-element;
+  padding-right: 15px;
+}
+
+.page-main__text {
+  @include text-parameter(14px, 1.29, $color-subtitle, 400);
+  text-transform: uppercase;
+}
+
+.form-feedback__group-parameters {
+  border: none;
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 0;
+  padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  &--cat {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  &--main-parameters {
+    border: 1px solid $color-border;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  &--owner,
+  &--comment,
+  &--additionally {
+    margin-left: 20px;
+  }
+}
+
+.form-feedback__text-label {
+  @include text-parameter(16px, 1.13, $color-subtitle-lighter, 400);
+  text-transform: uppercase;
+  margin-right: 15px;
+}
+
+.form-feedback__text-input {
+  padding: 15px;
+  border: 1px solid $color-border;
+  font-family: "Oswald", "Arial", sans-serif;
+
+  @include text-parameter(16px, 1.13, $color-text, 400);
+  outline: none;
+
+  &:hover {
+    border-color: $color-border-darker;
+  }
+
+  &:focus {
+    border-color: $color-text;
+    border-width: 2px;
+  }
+}
+
+.form-feedback__radio-button {
+  display: inline-block;
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 46px;
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $color-border;
+    border-radius: 50%;
+    margin-right: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    content: "";
+    display: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: $color-main;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+  &:hover::before {
+    border-color: $color-border-darker;
+  }
+
+  &:active::after {
+    background-color: rgba($color-main, 0.3);
+  }
+
+  &:active::before {
+    border-color: rgba($color-border-darker, 0.3);
+  }
+}
+
+.form-feedback input:checked + .form-feedback__radio-button::after {
+  display: inline-block;
+}
+
+.form-feedback__checkbox-button {
+  display: inline-block;
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 46px;
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid $color-border;
+    margin-right: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    content: "";
+    display: none;
+    width: 7px;
+    height: 16px;
+    margin: -3px 10px 3px;
+    border: solid $color-main;
+    border-width: 0 1px 2px 0;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 7px;
+    left: 2px;
+  }
+
+  &:hover::before {
+    border-color: $color-border-darker;
+  }
+
+  &:active::after {
+    border-color: rgba($color-main, 0.3);
+  }
+
+  &:active::before {
+    border-color: rgba($color-border-darker, 0.3);
+  }
+}
+
+.form-feedback input:checked + .form-feedback__checkbox-button::after {
+  display: inline-block;
+}
+
+.form-feedback__group-parameters--comment {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.form-feedback__comment {
+  display: block;
+  padding: 15px;
+  resize: none;
+  outline: none;
+  font-family: "Oswald", "Arial", sans-serif;
+
+  @include text-parameter(16px, 1.13, $color-text, 400);
+
+  &::placeholder {
+    font-family: "Oswald", "Arial", sans-serif;
+
+    @include text-parameter(16px, 1.13, $color-text, 400);
+  }
+
+  &:hover {
+    border-color: $color-border-darker;
+  }
+
+  &:focus {
+    border-color: $color-text;
+    border-width: 2px;
+  }
+}
+
+.form-feedback__submit {
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 35px;
+}
+
+.form-feedback__remark {
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 35px;
+
+  @include text-parameter(14px, 1.14, $color-text, 400);
+  text-align: center;
+}

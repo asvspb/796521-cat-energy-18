@@ -1,29 +1,19 @@
-@font-face {
-  font-family: "Oswald";
-  src:
-    url("../fonts/oswaldregular.woff2") format("woff2"),
-    url("../fonts/oswaldregular.woff") format("woff");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Oswald";
-  src:
-    url("../fonts/oswaldmedium.woff2") format("woff2"),
-    url("../fonts/oswaldmedium.woff") format("woff");
-  font-style: normal;
-  font-weight: 500;
-}
-
 @import "features/variables.scss";
 @import "features/hidden.scss";
+@import "features/mixins.scss";
 @import "features/base.scss";
-@import "blocks/header.scss";
-@import "blocks/nav.scss";
-@import "blocks/main.scss";
-@import "blocks/info.scss";
-@import "blocks/programms.scss";
-@import "blocks/advantages.scss";
-@import "blocks/footer.scss";
-@import "blocks/catalog.scss";
+@import "features/fonts.scss";
+//@import "features/normalize.scss";
+@import "blocks/about-product.scss";
+@import "blocks/button.scss";
+@import "blocks/catalog-section.scss";
+@import "blocks/example.scss";
+@import "blocks/form-feedback.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/page-header.scss";
+@import "blocks/page-main.scss";
+@import "blocks/product-card.scss";
+@import "blocks/site-list.scss";
+@import "blocks/social.scss";
+
