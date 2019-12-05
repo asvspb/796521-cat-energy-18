@@ -6,8 +6,26 @@
 
 .social__item {
   list-style: none;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.social__item:hover {
+  cursor: pointer;
 }
 
 .social__link {
   font-size: 0;
+}
+
+.social__item svg {
+  fill: #666666;
+}
+
+.social__item:hover svg {
+  fill: $color-main;
+}
+
+.social__item:active svg {
+  fill: rgba($color-main, 0.3);
 }

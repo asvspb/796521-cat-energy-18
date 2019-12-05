@@ -10,28 +10,56 @@
   }
 }
 
+.page-main__subtitle-wrapper {
+  padding-left: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .page-main__subtitle-wrapper {
+    padding-left: 30px;
+  }
+}
+
 .page-main__subtitle {
   @include text-parameter(24px, 1, $color-subtitle, 400);
-  margin-top: 30px;
-  margin-bottom: 30px;
+  background: #ffffff;
+  position: relative;
+  top: -15px;
+  padding-left: 20px;
+  padding-right: 25px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.page-main__additional-products .page-main__subtitle {
+  display: inline;
+}
+
+@media (min-width: $desktop-width) {
+  .page-main__subtitle {
+    left: -20px;
+  }
 }
 
 .page-main__text {
-  margin-right: 20px;
-  margin-left: 20px;
   margin-top: 0;
   margin-bottom: 40px;
 }
 
-.page-main__action {
-  background-image: url("../img/gift-photo-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  margin-top: 35px;
-  margin-bottom: 35px;
+@media (min-width: $tablet-width) {
+  .page-main__text {
+    padding-left: 50px;
+  }
 }
 
-.page-main__action_title {
-  @include text-parameter(16px, 1.25, $color-element, 400);
-  margin-top: 0;
-  margin-bottom: 0;
+@media (min-width: $desktop-width) {
+  .page-main__text {
+    padding-left: 30px;
+  }
+}
+
+.page-main__main-products {
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 40px;
 }

@@ -5,61 +5,309 @@
   margin-top: 40px;
 }
 
-.example__wrapper {
-  margin-right: 20px;
-  margin-left: 20px;
-}
-
 .example__title {
-  @include text-parameter(36px, 1.67, $color-subtitle, 400);
+  @include text-parameter(36px, 1.67, $color-subtitle, 400);
   margin-top: 0;
   margin-bottom: 0;
 }
 
 .example__text {
-  @include text-parameter(14px, 1.29, $color-text, 400);
+  @include text-parameter(14px, 1.29, $color-text, 400);
   margin-top: 30px;
   margin-bottom: 30px;
 }
 
+.example__fact-list {
+  display: block;
+}
+
+.example__fact-list tbody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.example__fact-list tr:first-child {
+  display: flex;
+}
+
 .example__fact-item {
+  display: flex;
+  min-width: 162px;
+  justify-content: center;
   border: 1px solid $color-border;
   border-radius: 3px;
   padding-left: 0;
   padding-right: 0;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 22px;
+  padding-bottom: 24px;
 
-  @include text-parameter(24px, 1, $color-subtitle, 400);
-  width: 124px;
-  height: 56px;
+  @include text-parameter(24px, 1, $color-subtitle, 400);
   text-transform: uppercase;
-  position: relative;
   text-align: center;
+  position: relative;
+
+  &:first-child {
+    margin-right: 35px;
+  }
 }
 
 .example__fact-comment {
-  @include text-parameter(12px, 1, $color-text, 400);
+  @include text-parameter(12px, 1, $color-text, 400);
   text-transform: lowercase;
+  text-align: center;
   position: absolute;
-  bottom: -15px;
+  bottom: -20px;
+  width: 57px;
   background-color: $color-secondary;
   padding-left: 15px;
   padding-right: 15px;
 }
 
 .example__fact-total-item {
-  @include text-parameter(14px, 1.43, $color-subtitle, 400);
+  @include text-parameter(14px, 1.43, $color-subtitle, 400);
   text-transform: uppercase;
   padding-right: 0;
   padding-left: 0;
   padding-top: 40px;
   padding-bottom: 25px;
-  text-align: center;
 }
 
-.example__verge {
-  text-transform: uppercase;
+.example__demonstration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  @include text-parameter(16px, 1.25, $color-subtitle, 400);
+@media (min-width: $tablet-width) {
+  .example {
+    background-color: #ffffff;
+  }
+
+  .example__text {
+    @include text-parameter(16px, 1.5, $color-text, 400);
+  }
+
+  .example__fact-list tbody {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .example__fact-item:first-child {
+    margin-right: 42px;
+  }
+
+  .example__fact-total-item {
+    @include text-parameter(20px, 1, $color-subtitle, 400);
+    width: 174px;
+    text-align: right;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .example__fact-comment {
+    background-color: #ffffff;
+    width: auto;
+    bottom: -6px;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .example__title {
+    width: 100%;
+  }
+
+  .example__facts {
+    width: 430px;
+  }
+
+  .example__fact-list tbody {
+    flex-direction: column;
+  }
+
+  .example__fact-total-item {
+    width: auto;
+    padding-top: 62px;
+    text-align: left;
+  }
+
+  .example__fact-item:last-of-type {
+    width: 100%;
+  }
+}
+
+// Переключатель фото кота/////////////////////////////////////////////////////////////
+.example__verge {
+  @include text-parameter(16px, 1.25, $color-subtitle, 400);
+  text-transform: uppercase;
+}
+
+.example__live-image-wrapper {
+  display: flex;
+}
+
+.jshidden {
+  display: none;
+}
+
+.example__wrapper span {
+  border-bottom: 1px dotted $color-border;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.example__wrapper:hover span {
+  border-bottom-style: solid;
+}
+
+.example__wrapper:focus span {
+  border-color: transparent;
+}
+
+.example__range {
+  appearance: none;
+  margin: 14px 0;
+}
+
+.example__range:focus {
+  outline: none;
+}
+
+.example__range-wrapper {
+  display: inline-block;
+}
+
+// мобильная версия переключателя
+@media (max-width: $mobile-width-only) {
+  .example__range-wrapper {
+    height: 14px;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 1px solid $color-border;
+    position: relative;
+  }
+
+  .example__toggle {
+    display: inline-block;
+    height: 6px;
+    border-radius: 6px;
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    width: calc(50% - 12px);
+    background-color: $color-main;
+  }
+
+  .example__range::-webkit-slider-runnable-track {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .example__range::-webkit-slider-thumb {
+    visibility: hidden;
+  }
+}
+
+//переключатель на планшет, десктоп
+@media (min-width: $tablet-width) {
+  //chrome
+  .example__range::-webkit-slider-runnable-track {
+    height: 6px;
+    cursor: pointer;
+    background: $color-element-darker;
+    border-radius: 2.5px;
+    border: none;
+  }
+
+  .example__range::-webkit-slider-thumb {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    border: 1px solid $color-border;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    background: url("../img/circle.svg") center center no-repeat, #ffffff;
+    cursor: pointer;
+    appearance: none;
+    margin-top: -14px;
+    position: relative;
+  }
+
+  .example__range:hover::-webkit-slider-thumb {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .example__range:active::-webkit-slider-thumb {
+    box-shadow: 0 4px 5px 0 rgba (0 0 0, 0.3);
+    border: solid 2px $color-main;
+  }
+
+  //Мозила
+  .example__range::-moz-range-track {
+    height: 6px;
+    cursor: pointer;
+    background: $color-element-darker;
+    border-radius: 2.5px;
+    border: none;
+  }
+
+  .example__range::-moz-range-thumb {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    border: 1px solid #cdcdcd;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    background: url("circle.svg") center center no-repeat, #ffffff;
+    cursor: pointer;
+    appearance: none;
+    margin-top: -14px;
+    position: relative;
+  }
+
+  .example__range:hover::-moz-range-thumb {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .example__range:active::-moz-range-thumb {
+    box-shadow: 0 4px 5px 0 rgba (0 0 0, 0.3);
+    border: solid 2px $color-main;
+  }
+
+  //IE
+  .example__range::-ms-track {
+    height: 6px;
+    cursor: pointer;
+    background: $color-element-darker;
+    border-radius: 2.5px;
+    border: none;
+  }
+
+  .example__range::-ms-thumb {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+    border: 1px solid #cdcdcd;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    background: url("circle.svg") center center no-repeat, #ffffff;
+    cursor: pointer;
+    appearance: none;
+    margin-top: -14px;
+    position: relative;
+  }
+
+  .example__range:hover::-ms-thumb {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  .example__range:active::-ms-thumb {
+    box-shadow: 0 4px 5px 0 rgba (0 0 0, 0.3);
+    border: solid 2px $color-main;
+  }
 }
