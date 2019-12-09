@@ -12,14 +12,14 @@
 }
 
 .page-header__logo {
-  margin-top: 11px;
+  margin-top: 13px;
 }
 
 @media (min-width: $tablet-width) {
   .page-header__header {
     display: flex;
     justify-content: space-between;
-    padding-top: 25px;
+    padding-top: 12px;
     padding-bottom: 25px;
     padding-right: 30px;
     padding-left: 30px;
@@ -29,11 +29,19 @@
     padding-right: 0;
     padding-left: 0;
   }
+
+  .page-header__logo-image {
+    width: 174px;
+    height: 59px;
+    margin-top: 0;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .page-header__header {
-    padding-top: 55px;
+    padding-top: 43px;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
@@ -43,11 +51,12 @@
   align-items: center;
   padding-right: 0;
   padding-left: 0;
+  background: url("../img/index-background-mobile@1x.jpg") top center no-repeat, linear-gradient(to bottom, #65a93c 63.5%, #ffffff 37.5%);
 }
 
 .page-header__preview-title {
   @include text-parameter(36px, 1, $color-element, 400);
-  margin-top: 0;
+  margin-top: 28px;
   margin-bottom: 20px;
   text-align: center;
 }
@@ -56,17 +65,17 @@
   text-transform: uppercase;
 
   @include text-parameter(14px, 1, $color-element, 400);
-  margin-top: 0;
+  margin-top: 5px;
   margin-bottom: 0;
   text-align: center;
 }
 
 .page-header__preview-image {
+  margin-top: 28px;
   margin-bottom: 3px;
 }
 
 .page-header__preview-link {
-  margin-top: auto;
   margin-right: 20px;
   margin-left: 20px;
   text-align: center;
@@ -76,13 +85,16 @@
 @media (min-width: $tablet-width) {
   .page-header__preview {
     align-items: flex-start;
-    padding-left: 120px;
+    padding-left: 117px;
+    background: none;
+    position: relative;
+    padding-bottom: 508px;
   }
 
   .page-header__preview-title {
     @include text-parameter(60px, 1, $color-subtitle, 400);
     text-align: start;
-    margin-bottom: 30px;
+    margin-bottom: 36px;
   }
 
   .page-header__preview-subtitle {
@@ -90,30 +102,51 @@
     text-align: start;
   }
 
+  .page-header__preview-image {
+    width: 709px;
+    height: 609px;
+    position: absolute;
+    top: 230px;
+    left: calc(50% - 304.5px);
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
   .page-header__preview-link {
     @include text-parameter(20px, 1, $color-element, 400);
     margin-right: 0;
     margin-left: 0;
-    margin-top: 45px;
-    padding-left: 30px;
-    padding-right: 30px;
+    margin-top: 48px;
+    padding-left: 26px;
+    padding-right: 29px;
     align-self: flex-start;
+    padding-top: 17px;
+    padding-bottom: 15px;
+    z-index: 6;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .page-header--main-page .page-header__header {
-    background-color: cadetblue; //временное свойство
+  .page-header--main-page {
+    background: url("../img/index-background-desktop@1x.jpg") calc(50% + 358px) top no-repeat, linear-gradient(to right, #ffffff 50%, #65a93c 50%);
   }
 
   .page-header__preview {
     background: none;
-    padding-bottom: 0;
-    padding-left: 160px;
+    padding-top: 50px;
+    padding-bottom: 187px;
+    padding-left: 81px;
     box-sizing: border-box;
   }
 
   .page-header__preview-link {
-    margin-top: 50px;
+    margin-top: 53px;
+  }
+
+  .page-header__preview-image {
+    width: 552px;
+    height: 499px;
+    top: 7px;
+    left: calc(50% - 155px);
   }
 }

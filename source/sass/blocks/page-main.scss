@@ -1,12 +1,19 @@
 .page-main__title {
   @include text-parameter(36px, 1.67, $color-subtitle, 400);
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 17px;
+  margin-bottom: 28px;
 }
 
 @media (min-width: $tablet-width) {
   .page-main__title {
     @include text-parameter(60px, 1, $color-subtitle, 400);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main__title {
+    margin-top: 17px;
+    margin-bottom: 28px;
   }
 }
 
@@ -24,20 +31,43 @@
   @include text-parameter(24px, 1, $color-subtitle, 400);
   background: #ffffff;
   position: relative;
-  top: -15px;
-  padding-left: 20px;
-  padding-right: 25px;
+  top: -18px;
+  padding-left: 18px;
+  padding-right: 24px;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .page-main__subtitle {
+    @include text-parameter(36px, 1, $color-subtitle, 400);
+    top: -25px;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main__subtitle {
+    top: -53px;
+    padding-left: 39px;
+    padding-right: 42px;
+  }
 }
 
 .page-main__additional-products .page-main__subtitle {
   display: inline;
 }
 
+@media (min-width: $tablet-width) {
+  .page-main__additional-products {
+    margin-bottom: 76px;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .page-main__subtitle {
-    left: -20px;
+    left: -40px;
   }
 }
 
@@ -61,5 +91,114 @@
 .page-main__main-products {
   padding-left: 0;
   padding-right: 0;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-main__main-products {
+    margin-bottom: 86px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main__main-products {
+    margin-bottom: 96px;
+  }
+}
+
+.page-main--index {
+  margin-top: 20px;
+}
+
+@media (min-width: $desktop-width) {
+  .page-main--index {
+    margin-top: 80px;
+  }
+}
+
+.page-main__example {
+  margin-top: 41px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-main__example {
+    margin-top: 27px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main__example {
+    margin-top: 170px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-main__about-product {
+    margin-top: 48px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main__about-product {
+    margin-top: 77px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .product-card {
+    margin-top: 28px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product-card {
+    margin-top: 46px;
+  }
+}
+
+.page-main--form {
+  & .page-main__text {
+    margin-top: -3px;
+    padding-right: 30px;
+    margin-bottom: 24px;
+
+    @include text-parameter(14px, 1.29, $color-subtitle, 400);
+    text-transform: uppercase;
+  }
+
+  & .page-main__subtitle {
+    top: -18px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-main--form {
+    & .page-main__title {
+      margin-top: 28px;
+      margin-bottom: 56px;
+    }
+
+    & .page-main__text {
+      @include text-parameter(20px, 1.5, $color-subtitle, 400);
+      margin-top: 0;
+      padding-left: 40px;
+      max-width: 325px;
+    }
+
+    & .page-main__subtitle {
+      top: -25px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main--form {
+    & .page-main__title {
+      margin-top: 45px;
+    }
+
+    & .page-main__text {
+      padding-left: 0;
+    }
+  }
 }

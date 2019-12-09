@@ -6,20 +6,53 @@
 
 .catalog-section__item {
   background-color: $color-secondary;
-  margin-top: 20px;
   padding: 20px;
   list-style: none;
+  position: relative;
+
+  &:last-child {
+    margin-top: 18px;
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: $color-main;
+    position: absolute;
+    top: 26px;
+    left: 21px;
+  }
+
+  & svg {
+    position: absolute;
+    z-index: 9;
+  }
+
+  &--slim svg {
+    top: 24px;
+    left: 30px;
+  }
+
+  &--fat svg {
+    top: 36px;
+    left: 13px;
+  }
 }
 
 .catalog-section__title {
   @include text-parameter(24px, 1.54, $color-subtitle, 400);
   text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 35px;
+  margin-top: 11px;
+  margin-bottom: 32px;
   padding-left: 70px;
 }
 
 .catalog-section__description {
+  font-family: $secondary-font;
+
   @include text-parameter(14px, 1.29, $color-text, 400);
   border-bottom: 1px solid $color-border;
   padding-bottom: 20px;
@@ -28,29 +61,81 @@
 }
 
 .catalog-section__link {
+  @include text-parameter(16px, 1, $color-subtitle, 400);
   text-transform: uppercase;
 
-  @include text-parameter(16px, 1, $color-subtitle, 400);
+  &::after {
+    content: url("../img/icon-right-arrow-long.svg");
+    display: inline-block;
+    width: 23px;
+    height: 12px;
+    margin-left: 12px;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .catalog-section__item {
-    padding-right: 280px;
-    padding-left: 50px;
+    padding-right: 315px;
+    padding-left: 53px;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 59px;
+
+    &:last-child {
+      margin-top: 32px;
+    }
+
+    &::before {
+      width: 200px;
+      height: 200px;
+      top: 92px;
+      right: 61px;
+      left: auto;
+    }
+
+    &--slim {
+      padding-right: 282px;
+
+      & svg {
+        width: 141px;
+        height: 194px;
+        top: 81px;
+        left: auto;
+        right: 92px;
+      }
+    }
+
+    &--fat {
+      padding-right: 314px;
+
+      & svg {
+        width: 268px;
+        height: 113px;
+        top: 136px;
+        left: auto;
+        right: 28px;
+      }
+    }
+  }
+
+  .catalog-section__link::after {
+    margin-left: 23px;
+    width: 24px;
+    height: 11px;
     position: relative;
-    margin-top: 30px;
+    top: -2px;
   }
 
   .catalog-section__description {
     border-bottom: none;
+    margin-bottom: 35px;
 
     @include text-parameter(16px, 1.5, $color-text, 400);
   }
 
   .catalog-section__title {
     padding-left: 0;
+    margin-top: 28px;
+    margin-bottom: 24px;
 
     @include text-parameter(36px, 1.03, $color-subtitle, 400);
   }
@@ -72,12 +157,42 @@
     margin-right: 0;
     margin-left: 0;
 
-    &:first-of-type {
-      margin-right: 80px;
+    &:last-of-type {
+      margin-left: 80px;
+      margin-top: 0;
+    }
+
+    &::before {
+      width: 100px;
+      height: 100px;
+      top: 47px;
+      right: auto;
+      left: 52px;
+    }
+
+    &--slim svg {
+      width: 71px;
+      height: 97px;
+      top: 41px;
+      left: 65px;
+      right: auto;
+    }
+
+    &--fat svg {
+      width: 134px;
+      height: 57px;
+      top: 69px;
+      left: 34px;
+      right: auto;
     }
   }
 
   .catalog-section__title {
-    padding-left: 170px;
+    padding-left: 163px;
+  }
+
+  .catalog-section__description {
+    margin-bottom: 10px;
+    margin-top: 75px;
   }
 }
