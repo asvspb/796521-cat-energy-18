@@ -4,21 +4,15 @@
   margin-bottom: 0;
 }
 
-.about-product__item {
-  list-style: none;
-
-  &:not(:last-of-type) {
-    margin-bottom: 20px;
-  }
-}
-
 .about-product__title {
   @include text-parameter(36px, 1.67, $color-subtitle, 400);
-  margin-top: 0;
-  margin-bottom: 35px;
+  margin-top: 18px;
+  margin-bottom: 28px;
 }
 
 .about-product__text {
+  font-family: $secondary-font;
+
   @include text-parameter(14px, 1.29, $color-text, 400);
   position: relative;
   display: inline-block;
@@ -32,37 +26,115 @@
     display: inline-block;
     width: 60px;
     height: 60px;
-    background-color: $color-main;
+    background: url("../img/css_sprites.png"), $color-main;
     position: absolute;
     top: 0;
     left: 0;
   }
 }
 
+.about-product__item {
+  list-style: none;
+
+  &:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+
+  &--healthy .about-product__text::before {
+    background-position: -5px -76px;
+  }
+
+  &--powder .about-product__text::before {
+    background-position: -75px -77px;
+  }
+
+  &--eating .about-product__text::before {
+    background-position: -76px -6px;
+  }
+
+  &--results .about-product__text::before {
+    background-position: -5px -6px;
+  }
+}
+
 @media (min-width: $tablet-width) {
+  .about-product {
+    border-bottom: 1px solid $color-border;
+  }
+
   .about-product__title {
     @include text-parameter(60px, 1, $color-subtitle, 400);
-    margin-bottom: -25px;
+    margin-bottom: 0;
+    margin-top: 0;
   }
 
   .about-product__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-bottom: 54px;
+    margin-top: -19px;
   }
 
   .about-product__item {
-    flex-basis: 202px;
+    flex-basis: 246px;
     flex-shrink: 0;
-    margin-right: 150px;
-    margin-top: 85px;
-    padding-bottom: 50px;
+    position: relative;
+    margin-right: 79px;
+    padding-bottom: 51px;
+    margin-top: 89px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      @include text-parameter(281px, 1, $color-secondary, 400);
+      display: inline-block;
+      width: 121px;
+      height: 230px;
+      position: absolute;
+      top: -37px;
+      right: 11px;
+    }
+
+    &--healthy::before {
+      content: "1";
+    }
+
+    &--powder::before {
+      content: "2";
+    }
+
+    &--eating::before {
+      content: "3";
+    }
+
+    &--results::before {
+      content: "4";
+    }
+
+    &--healthy .about-product__text::before {
+      background-position: 6px -63px;
+    }
+
+    &--powder .about-product__text::before {
+      background-position: -64px -63px;
+    }
+
+    &--eating .about-product__text::before {
+      background-position: -65px 4px;
+    }
+
+    &--results .about-product__text::before {
+      background-position: 6px 5px;
+    }
   }
 
   .about-product__text {
     @include text-parameter(16px, 1.5, $color-text, 400);
     padding-left: 0;
-    padding-top: 115px;
+    padding-top: 112px;
 
     &::before {
       width: 80px;
@@ -73,8 +145,12 @@
 
 @media (min-width: $desktop-width) {
   .about-product__item {
-    flex-basis: 200px;
+    flex-basis: 246px;
     padding-bottom: 40px;
     margin-right: 0;
+  }
+
+  .about-product {
+    border-bottom: none;
   }
 }

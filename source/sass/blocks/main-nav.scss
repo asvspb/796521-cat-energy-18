@@ -5,6 +5,7 @@
   height: 65px;
   width: 65px;
   border: none;
+  background: transparent;
 
   &:hover {
     cursor: pointer;
@@ -25,12 +26,12 @@
 .main-nav--close .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 25px;
-  left: 19px;
+  top: 24px;
+  left: 20px;
   width: 24px;
   height: 2px;
   background-color: $color-subtitle-lighter;
-  box-shadow: 0 6px 0 0 $color-subtitle-lighter, 0 12px 0 0 $color-subtitle-lighter;
+  box-shadow: 0 7px 0 0 $color-subtitle-lighter, 0 15px 0 0 $color-subtitle-lighter;
 }
 
 .main-nav--close .main-nav__toggle:hover::before {
@@ -85,11 +86,12 @@
   }
 
   .main-nav--open .main-nav__list {
-    position: absolute;
     right: 0;
     left: 0;
-    background: #ffffff;
-    z-index: 10;
+  }
+
+  .main-nav__toggle {
+    font-size: 0;
   }
 
   .main-nav--nojs .main-nav__toggle {
@@ -97,7 +99,6 @@
   }
 
   .main-nav--nojs .main-nav__list {
-    position: static;
     display: block;
   }
 }
