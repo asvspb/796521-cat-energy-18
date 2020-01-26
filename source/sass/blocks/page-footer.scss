@@ -7,14 +7,13 @@
   min-height: 114px;
   justify-content: space-between;
   align-items: center;
+  z-index: 9;
 }
 
 .page-footer__map {
   width: 100vw;
   max-width: 100%;
-  border: none;
   height: 362px;
-  margin-bottom: -3px;
 }
 
 .page-footer__header--main-title {
@@ -54,15 +53,21 @@
 .page-footer__logo {
   padding-top: 39px;
   padding-bottom: 28px;
+
+  & svg {
+    width: 128px;
+    height: 24px;
+  }
+
+  &[href]:hover {
+    opacity: 0.8;
+  }
+
+  &[href]:active {
+    opacity: 0.6;
+  }
 }
 
-.page-footer__logo[href]:hover {
-  opacity: 0.8;
-}
-
-.page-footer__logo[href]:active {
-  opacity: 0.6;
-}
 
 .page-footer__social-list {
   border-top: 1px solid $color-border;

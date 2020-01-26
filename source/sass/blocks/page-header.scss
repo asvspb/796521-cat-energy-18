@@ -13,6 +13,14 @@
 
 .page-header__logo {
   margin-top: 13px;
+
+  &[href]:hover {
+    opacity: 0.8;
+  }
+
+  &[href]:active {
+    opacity: 0.6;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -43,6 +51,11 @@
     padding-right: 0;
     padding-left: 0;
   }
+
+  .page-header__logo-image {
+    width: 203px;
+    height: 60px;
+  }
 }
 
 .page-header__preview {
@@ -52,6 +65,11 @@
   padding-right: 0;
   padding-left: 0;
   background: url("../img/index-background-mobile@1x.jpg") top center no-repeat, linear-gradient(to bottom, #65a93c 63.5%, #ffffff 37.5%);
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/index-background-mobile@2x.jpg"), linear-gradient(to bottom, #65a93c 63.5%, #ffffff 37.5%);
+    background-size: 320px auto;
+  }
 }
 
 .page-header__preview-title {
@@ -107,7 +125,7 @@
     height: 609px;
     position: absolute;
     top: 230px;
-    left: calc(50% - 304.5px);
+    left: calc(50% - 356px);
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -123,6 +141,13 @@
     padding-top: 17px;
     padding-bottom: 15px;
     z-index: 6;
+  }
+}
+
+@media (min-resolution: $retina-dppx) and (min-width: $desktop-width) {
+  .page-header--main-page {
+    background: url("../img/index-background-desktop@2x.jpg") calc(50% + 358px) top no-repeat, linear-gradient(to right, #ffffff 50%, #65a93c 50%);
+    background-size: 720px auto;
   }
 }
 
@@ -146,7 +171,7 @@
   .page-header__preview-image {
     width: 552px;
     height: 499px;
-    top: 7px;
-    left: calc(50% - 155px);
+    top: -3px;
+    left: calc(50% - 159px);
   }
 }

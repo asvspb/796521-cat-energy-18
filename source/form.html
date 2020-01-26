@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML Academy: Cat Energy</title>
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/picturefill.js" async></script>
   </head>
 
   <body>
@@ -33,11 +34,13 @@
         </nav>
       </div>
     </header>
+
     <main class="page-main page-main--form">
         <div class="container">
           <h1 class="page-main__title">Подбор программы</h1>
           <p class="page-main__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
         </div>
+
       <form class="page-main__form form-feedback" action="https://echo.htmlacademy.ru" method="get">
         <div class="container form-feedback__header-container">
           <fieldset class="form-feedback__group-parameters form-feedback__group-parameters--cat">
@@ -59,6 +62,7 @@
               </li>
             </ul>
           </fieldset>
+
           <fieldset class="form-feedback__group-parameters form-feedback__group-parameters--main-parameters">
             <ul role="none" class="form-feedback__list">
               <li class="form-feedback__item">
@@ -76,6 +80,8 @@
             </ul>
           </fieldset>
         </div>
+
+
         <fieldset class="form-feedback__group-parameters form-feedback__group-parameters--owner">
           <div class="page-main__subtitle-wrapper container">
             <legend class="page-main__subtitle">Контактные данные (владельца кота)</legend>
@@ -103,6 +109,7 @@
             </li>
           </ul>
         </fieldset>
+
         <fieldset class="form-feedback__group-parameters form-feedback__group-parameters--comment">
           <div class="page-main__subtitle-wrapper container">
             <label class="page-main__subtitle" for="comment">Комментарий</label>
@@ -112,6 +119,7 @@
               tabindex="9" id="comment"></textarea>
           </div>
         </fieldset>
+
         <fieldset class="form-feedback__group-parameters form-feedback__group-parameters--additionally">
           <div class="page-main__subtitle-wrapper container">
             <legend class="page-main__subtitle">Дополнительно</legend>
@@ -135,12 +143,14 @@
             </li>
           </ul>
         </fieldset>
+
         <div class="container form-feedback__footer">
           <input class="form-feedback__submit button button--color1" type="submit" value="Отправить заявку" tabindex="14">
           <p class="form-feedback__remark"><sup>*</sup> &ndash; Обязательные поля</p>
         </div>
       </form>
     </main>
+
     <footer class="page-footer">
       <div class="page-footer__header page-footer__header--main-title">
         <div class="container">
@@ -149,7 +159,7 @@
             <p class="page-footer__address">ул. Большая Конюшенная, д.&#160;19&#47;8 <span>Санкт-Петербург</span></p>
           </div>
         </div>
-        <iframe class="page-footer__map" title="footer map"
+        <iframe class="page-footer__map"
           src="https://www.google.com/maps/d/embed?mid=1658E0cP4YY0Ovn06-SCK-qiOcY0Z1BUo&hl=ru" width="320"
           height="360"></iframe>
       </div>
@@ -187,6 +197,7 @@
         </a>
       </div>
     </footer>
+
     <script src="js/main-menu.js"></script>
   </body>
 
