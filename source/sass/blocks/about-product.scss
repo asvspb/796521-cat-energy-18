@@ -27,6 +27,11 @@
     width: 60px;
     height: 60px;
     background: url("../img/css_sprites.png"), $color-main;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: url("../img/css_sprites@2x.png"), $color-main;
+      background-size: 140px auto;
+    }
     position: absolute;
     top: 0;
     left: 0;
