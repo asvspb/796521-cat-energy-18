@@ -345,7 +345,7 @@
     height: 34px;
     width: 34px;
     border-radius: 50%;
-    background: url("../img/circle.svg") center center no-repeat, #ffffff;
+    background: url("data:image/svg+xml,%3Csvg height='8' width='8' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' r='4' fill='%2368b738'%3E%3C/circle%3E%3C/svg%3E%0A") center center no-repeat, #ffffff;
     cursor: pointer;
     appearance: none;
     margin-top: -14px;
