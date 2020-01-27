@@ -12,7 +12,7 @@ ymaps.ready(function () {
       ),
 
       myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-          hintContent: 'HTML Academy: Cat Energy',
+          hintContent: 'CAT ENERGY',
           balloonContent: 'Функциональное питание для котов!'
       }, {
           // Опции.
