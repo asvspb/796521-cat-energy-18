@@ -1,9 +1,8 @@
-@import "features/normalize.scss";
-@import "features/variables.scss";
-@import "features/visually-hidden.scss";
-@import "features/mixins.scss";
-@import "features/base.scss";
-@import "features/fonts.scss";
+@import "variables.scss";
+@import "normalize.scss";
+@import "mixin.scss";
+@import "fonts.scss";
+@import "scafolding.scss";
 @import "blocks/about-product.scss";
 @import "blocks/button.scss";
 @import "blocks/catalog-section.scss";
@@ -16,3 +15,4 @@
 @import "blocks/product-card.scss";
 @import "blocks/site-list.scss";
 @import "blocks/social.scss";
+@import "blocks/additional-product.scss";
