@@ -3,12 +3,17 @@
 <head>
   <meta charset="utf-8">
   <title>CAT ENERGY</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <script src="js/picturefill.js" async></script>
+  <script src="js/picturefill.js" async=""></script>
 </head>
 
 <body>
+
+  <div style="display: none;">
+    <include src="build/img/svg/sprite.svg"></include>
+  </div>
+
   <header class="page-header page-header--main-page">
     <div class="page-header__header container">
       <div class="page-header__wrapper">
@@ -109,52 +114,50 @@
         </div>
         <form class="example__demonstration">
           <div class="example__live-image-wrapper">
-            <picture>
+            <picture class="example__mobile-image">
+              <source type="image/webp" srcset="img/example/before-mobile@1x.webp 1x, img/example/before-mobile@2x.webp">
+              <img src="img/example/before-mobile@1x.png" srcset="img/example/before-mobile@2x.png 2x" id="before-mobile" width="320" height="240px">
+            </picture>
+            <picture class="example__mobile-image">
+                <source type="image/webp" srcset="img/example/after-mobile@1x.webp 1x, img/example/after-mobile@2x.webp">
+              <img class="jshidden" src="img/example/after-mobile@1x.png" srcset="img/example/after-mobile@2x.png 2x" id="after-mobile" width="320" height="240px">
+            </picture>
+            <picture class="example__tablet-image">
               <source type="image/webp" media="(min-width: 1280px)" srcset="img/example/fat-left-desktop@1x.webp 1x, img/example/fat-left-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/example/fat-left-tablet@1x.webp 1x, img/example/fat-left-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/example/fat-left-mobile@1x.webp 1x, img/example/fat-left-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/example/fat-left-tablet@1x.webp 1x, img/example/fat-left-tablet@2x.webp 2x">
 
               <source media="(min-width: 1280px)" srcset="img/example/fat-left-desktop@1x.png 1x, img/example/fat-left-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/example/fat-left-tablet@1x.png 1x, img/example/fat-left-tablet@2x.png 2x">
-              <img class="example__live-image example__live-image--fat-left" src="img/example/fat-left-mobile@1x.png" srcset="img/example/fat-left-mobile@2x.png 2x" id="fat-left" alt="Кот Борис">
+              <img src="img/example/fat-left-tablet@1x.png" srcset="img/example/fat-left-tablet@2x.png 2x" id="fat-left" alt="Кот Борис">
             </picture>
 
-            <picture>
+            <picture class="example__tablet-image">
               <source type="image/webp" media="(min-width: 1280px)" srcset="img/example/slim-left-desktop@1x.webp 1x, img/example/slim-left-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/example/slim-left-tablet@1x.webp 1x, img/example/slim-left-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/example/slim-left-mobile@1x.webp 1x, img/example/slim-left-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/example/slim-left-tablet@1x.webp 1x, img/example/slim-left-tablet@2x.webp 2x">
 
               <source media="(min-width: 1280px)" srcset="img/example/slim-left-desktop@1x.png 1x, img/example/slim-left-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/example/slim-left-tablet@1x.png 1x, img/example/slim-left-tablet@2x.png 2x">
-              <img class="example__live-image example__live-image--slim-left jshidden" src="img/example/slim-left-mobile@1x.png" srcset="img/example/slim-left-mobile@2x.png 2x" id="slim-left" alt="Кот Борис">
+              <img class="jshidden" src="img/example/slim-left-tablet@1x.png" srcset="img/example/slim-left-tablet@2x.png 2x" id="slim-left" alt="Кот Борис">
             </picture>
 
-            <picture>
+            <picture class="example__tablet-image">
               <source type="image/webp" media="(min-width: 1280px)" srcset="img/example/fat-right-desktop@1x.webp 1x, img/example/fat-right-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/example/fat-right-tablet@1x.webp 1x, img/example/fat-right-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/example/fat-right-mobile@1x.webp 1x, img/example/fat-right-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/example/fat-right-tablet@1x.webp 1x, img/example/fat-right-tablet@2x.webp 2x">
 
               <source media="(min-width: 1280px)" srcset="img/example/fat-right-desktop@1x.png 1x, img/example/fat-right-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/example/fat-right-tablet@1x.png 1x, img/example/fat-right-tablet@2x.png 2x">
-              <img class="example__live-image example__live-image--fat-right jshidden" src="img/example/fat-right-mobile@1x.png" srcset="img/example/fat-right-mobile@2x.png 2x" id="fat-right" alt="Кот Борис">
+              <img class="jshidden" src="img/example/fat-right-tablet@1x.png" srcset="img/example/fat-right-tablet@2x.png 2x" id="fat-right" alt="Кот Борис">
             </picture>
 
-            <picture>
+            <picture class="example__tablet-image">
               <source type="image/webp" media="(min-width: 1280px)" srcset="img/example/slim-right-desktop@1x.webp 1x, img/example/slim-right-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="img/example/slim-right-tablet@1x.webp 1x, img/example/slim-right-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/example/slim-right-mobile@1x.webp 1x, img/example/slim-right-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/example/slim-right-tablet@1x.webp 1x, img/example/slim-right-tablet@2x.webp 2x">
 
               <source media="(min-width: 1280px)" srcset="img/example/slim-right-desktop@1x.png 1x, img/example/slim-right-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/example/slim-right-tablet@1x.png 1x, img/example/slim-right-tablet@2x.png 2x">
-              <img class="example__live-image example__live-image--slim-right" src="img/example/slim-right-mobile@1x.png" srcset="img/example/slim-right-mobile@2x.png 2x" id="slim-right" alt="Кот Борис">
+              <img src="img/example/slim-right-tablet@1x.png" srcset="img/example/slim-right-tablet@2x.png 2x" id="slim-right" alt="Кот Борис">
             </picture>
           </div>
           <label class="example__wrapper">
               <span>Было</span>
-              <div class="example__range-wrapper">
-                  <i class="example__toggle" id="example_toggle"></i>
-                  <input class="example__range" type="range" min=1 max=3 value="2" id="expample_range">
-              </div>
+              <input class="example__mobile-range" type="range" min="1" max="2" value="1" id="example_mobile_range">
+              <input class="example__range" type="range" min="1" max="3" value="2" id="expample_range">
               <span>Стало</span>
           </label>
         </form>
@@ -179,20 +182,20 @@
       <ul class="page-footer__social-list social">
         <li class="social__item social__item--vkontakte" aria-labelledby="Ссылка вконтакте">
           <a class="social__link" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
-          <svg width="22" height="12" focusable="false" aria-hidden="true"><use xlink:href="img/sprite-svg.svg#vk"></use></svg>
+          <svg width="22" height="12" focusable="false" aria-hidden="true" fill="currentColor"><use xlink:href="#icon-vk"></use></svg>
         </li>
         <li class="social__item social__item--instagram" aria-labelledby="Ссылка инстаграмм">
           <a class="social__link" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
-          <svg width="17" height="17" focusable="false" aria-hidden="true"><use xlink:href="img/sprite-svg.svg#inst"></use></svg>
+          <svg width="17" height="17" focusable="false" aria-hidden="true" fill="currentColor"><use xlink:href="#icon-insta"></use></svg>
         </li>
         <li class="social__item social__item--facebook" aria-labelledby="Ссылка фэйсбук">
           <a class="social__link" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
-          <svg width="10" height="19" focusable="false" aria-hidden="true"><use xlink:href="img/sprite-svg.svg#fb"></use></svg>
+          <svg width="10" height="19" focusable="false" aria-hidden="true" fill="currentColor"><use xlink:href="#icon-fb"></use></svg>
         </li>
       </ul>
       <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-labelledby="Ссылка HTML academy">
         <span>HTML Academy</span>
-        <svg width="27" height="34" focusable="false"><use xlink:href="img/sprite-svg.svg#htmlacademy"></use></svg>
+        <svg width="27" height="34" focusable="false"><use xlink:href="#icon-htmlacademy" fill="currentColor"></use></svg>
       </a>
     </div>
   </footer>

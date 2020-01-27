@@ -27,7 +27,7 @@
   }
 
   &--slim::after {
-    content: url("../img/svg/icon-cat-slim.svg");
+    content: url("../img/svg/cat-slim.svg");
     width: 35px;
     height: 49px;
     position: absolute;
@@ -36,7 +36,7 @@
   }
 
   &--fat::after {
-    content: url("../img/svg/icon-cat-pro.svg");
+    content: url("../img/svg/cat-pro.svg");
     width: 67px;
     height: 28px;
     position: absolute;
