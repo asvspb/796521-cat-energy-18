@@ -4,30 +4,15 @@
   margin-bottom: 0;
 }
 
-.social__item:hover {
-  cursor: pointer;
-}
-
 .social__link {
   font-size: 0;
-}
-
-.social__item svg {
-  fill: #666666;
-}
-
-.social__item:hover svg {
-  fill: $color-main;
-}
-
-.social__item:active svg {
-  fill: rgba($color-main, 0.3);
 }
 
 .social__item {
   list-style: none;
   margin-right: 17px;
   margin-left: 17px;
+  color: #666666;
 
   &--instagram svg {
     width: 17px;
@@ -42,6 +27,15 @@
   &--vkontakte svg {
     width: 22px;
     height: 12px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: $color-main;
+  }
+
+  &:active {
+    color: rgba($color-main, 0.3);
   }
 }
 

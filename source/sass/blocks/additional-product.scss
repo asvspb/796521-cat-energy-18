@@ -123,20 +123,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
-
-  & svg {
-    fill: #ffffff;
-    margin-top: 64px;
-  }
 }
 
 .additional-product__action_title {
   @include text-parameter(16px, 1.25, $color-element, 400);
   font-family: $secondary-font;
   margin-bottom: 0;
-  margin-top: 62px;
+  padding-top: 46px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &::before {
+    content: url("../img/svg/icon-gift.svg");
+    display: block;
+    width: 56px;
+    height: 61px;
+    margin-bottom: 62px;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -153,17 +158,21 @@
     flex-direction: row;
     justify-content: space-between;
     width: 708px;
-
-    & svg {
-      margin-left: 90px;
-      margin-top: 0;
-    }
   }
 
   .additional-product__action_title {
-    margin-right: 125px;
-    margin-top: 0;
     text-align: left;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 125px;
+    padding-left: 90px;
+    padding-top: 0;
+    margin-top: 0;
+    width: 100%;
+
+    &::before {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -189,17 +198,18 @@
     margin-bottom: 0;
     flex-direction: column;
     align-items: center;
-
-    & svg {
-      margin-left: 0;
-      margin-top: 63px;
-    }
   }
 
   .additional-product__action_title {
-    margin-right: 0;
-    margin-bottom: 43px;
+    flex-direction: column;
+    padding-top: 61px;
+    padding-right: 0;
+    padding-left: 0;
     text-align: center;
+
+    &::before {
+      margin-bottom: 62px;
+    }
   }
 
   .additional-product__list {
