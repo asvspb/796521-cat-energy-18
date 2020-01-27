@@ -76,9 +76,16 @@
     }
 
     & svg {
-      fill: $color-subtitle-lighter;
       position: absolute;
       right: 15px;
+    }
+
+    & .form-feedback__text-input + svg {
+      color: $color-subtitle-lighter;
+    }
+
+    & .form-feedback__text-input:hover + svg {
+      color: $color-main;
     }
   }
 
@@ -302,6 +309,7 @@
 
   &:hover {
     border-color: $color-border-darker;
+    cursor: pointer;
   }
 
   &:focus {
@@ -350,6 +358,7 @@
 
   &:hover::before {
     border-color: $color-border-darker;
+    cursor: pointer;
   }
 
   &:active::after {
@@ -420,6 +429,7 @@
 
   &:hover::before {
     border-color: $color-border-darker;
+    cursor: pointer;
   }
 
   &:active::after {
@@ -493,6 +503,7 @@
 
   &:hover {
     border-color: $color-border-darker;
+    cursor: pointer;
   }
 
   &:focus {
@@ -507,6 +518,7 @@
   }
 
   .form-feedback__comment {
+    @include text-parameter(20px, 1.5, $color-text, 400);
     margin-right: 37px;
     margin-left: 40px;
     padding: 9px 18px;
@@ -518,10 +530,30 @@
   }
 }
 
-
 @media (min-width: $desktop-width) {
   .form-feedback__comment {
     margin-left: 0;
     margin-right: 0;
+  }
+}
+
+.form-feedback .error {
+  border-color: $color-error;
+  border-width: 2px;
+
+  &:hover {
+    border-color: $color-error;
+  }
+
+  &:focus {
+    border-color: $color-error;
+  }
+
+  & + svg {
+    color: $color-error;
+  }
+
+  &:hover + svg {
+    color: $color-error;
   }
 }
