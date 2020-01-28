@@ -1,7 +1,7 @@
 .example {
   background-color: $color-secondary;
   padding-top: 17px;
-  padding-bottom: 26px;
+  padding-bottom: 36px;
 }
 
 .example__title {
@@ -141,8 +141,13 @@
 
 .example__live-image-wrapper {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 32px;
   overflow: hidden;
+}
+
+.example__live-image-wrapper img {
+  height: 240px;
+  width: auto;
 }
 
 .jshidden {
@@ -153,18 +158,18 @@
   @include text-parameter(16px, 1.25, $color-subtitle, 400);
   border-bottom: 1px dotted $color-border;
   text-transform: uppercase;
+  padding-bottom: 5px;
 }
 
 .example__wrapper:hover span {
   border-bottom-style: solid;
 }
 
-.example__wrapper:focus span {
+.example__wrapper:active span {
   border-color: transparent;
 }
 
-.example__range:focus,
-.example__mobile-range:focus {
+.example__range:focus {
   outline: none;
 }
 
@@ -184,13 +189,17 @@
   .example__demonstration {
     background: linear-gradient(to right, $color-secondary 50%, #eaeaea 50%);
     margin-top: 254px;
-    padding-bottom: 68px;
+    padding-bottom: 39px;
   }
 
   .example__live-image-wrapper {
     height: 517px;
     margin-top: -168px;
-    margin-bottom: 13px;
+    margin-bottom: 0;
+  }
+
+  .example__live-image-wrapper img {
+    height: 517px;
   }
 
   .example__range {
@@ -270,7 +279,7 @@
 
   .example__demonstration {
     margin-top: 0;
-    padding-bottom: 66px;
+    padding-bottom: 39px;
     margin-right: -30px;
   }
 
@@ -283,16 +292,14 @@
 
 //мобильная версия переключателя
 .example__range {
-  display: none;
-}
-
-.example__mobile-range {
   appearance: none;
-  margin: 14px 19px;
+  margin: 0 19px;
   width: 84px;
+  height: 14px;
+  background: transparent;
 }
 
-.example__mobile-range::-webkit-slider-runnable-track {
+.example__range::-webkit-slider-runnable-track {
   height: 14px;
   width: 84px;
   cursor: pointer;
@@ -302,7 +309,7 @@
   padding: 4px 6px;
 }
 
-.example__mobile-range::-webkit-slider-thumb {
+.example__range::-webkit-slider-thumb {
   border: none;
   height: 6px;
   width: 35px;
@@ -313,7 +320,7 @@
   margin-top: -1px;
 }
 
-.example__mobile-range::-moz-range-track {
+.example__range::-moz-range-track {
   height: 14px;
   width: 84px;
   cursor: pointer;
@@ -355,29 +362,22 @@
   margin-top: -1px;
 }
 
-.example__tablet-image {
-  display: none;
+.example__range::-ms-fill-lower {
+  background: #ffffff;
+  border-radius: 6px;
+  border: 1px solid $color-border;
 }
 
-.example__mobile-image img {
-  height: 240px;
+.example__range::-ms-fill-upper {
+  background: #ffffff;
+  border-radius: 6px;
+  border: 1px solid $color-border;
 }
 
 //переключатель на планшет, десктоп
 @media (min-width: $tablet-width) {
   .example__range {
-    display: block;
-    appearance: none;
-    margin: 14px 14px;
-  }
-
-  .example__mobile-range,
-  .example__mobile-image {
-    display: none;
-  }
-
-  .example__tablet-image {
-    display: block;
+    width: 428px;
   }
 
   //chrome
@@ -387,6 +387,7 @@
     background: $color-element-darker;
     border-radius: 2.5px;
     border: none;
+    padding: 0;
   }
 
   .example__range::-webkit-slider-thumb {
@@ -414,10 +415,12 @@
   //Мозила
   .example__range::-moz-range-track {
     height: 6px;
+    width: 100%;
     cursor: pointer;
     background: $color-element-darker;
     border-radius: 2.5px;
     border: none;
+    padding: 0;
   }
 
   .example__range::-moz-range-thumb {
@@ -426,7 +429,7 @@
     height: 34px;
     width: 34px;
     border-radius: 50%;
-    background: url("circle.svg") center center no-repeat, #ffffff;
+    background: url("data:image/svg+xml,%3Csvg height='8' width='8' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' r='4' fill='%2368b738'%3E%3C/circle%3E%3C/svg%3E%0A") center center no-repeat, #ffffff;
     cursor: pointer;
     appearance: none;
     margin-top: -14px;
@@ -443,12 +446,19 @@
   }
 
   //IE
+  .example__wrapper,
+  .example__range {
+    height: 60px;
+  }
+
   .example__range::-ms-track {
     height: 6px;
+    width: 100%;
     cursor: pointer;
     background: $color-element-darker;
     border-radius: 2.5px;
     border: none;
+    padding: 0;
   }
 
   .example__range::-ms-thumb {
@@ -457,11 +467,23 @@
     height: 34px;
     width: 34px;
     border-radius: 50%;
-    background: url("circle.svg") center center no-repeat, #ffffff;
+    background: url("data:image/svg+xml,%3Csvg height='8' width='8' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' r='4' fill='%2368b738'%3E%3C/circle%3E%3C/svg%3E%0A") center center no-repeat, #ffffff;
     cursor: pointer;
     appearance: none;
-    margin-top: -14px;
     position: relative;
+    margin-top: 5px;
+  }
+
+  .example__range::-ms-fill-lower {
+    background: $color-element-darker;
+    border-radius: 2.5px;
+    border: none;
+  }
+
+  .example__range::-ms-fill-upper {
+    background: $color-element-darker;
+    border-radius: 2.5px;
+    border: none;
   }
 
   .example__range:hover::-ms-thumb {

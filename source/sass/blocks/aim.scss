@@ -1,0 +1,117 @@
+.aim {
+  @include zero-indent;
+  margin: 0 auto 28px;
+  width: 320px;
+
+  border: 1px solid #ededed;
+}
+
+.aim__list {
+  @include no-list;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 156px;
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+.aim__label {
+  @include form-label;
+  position: relative;
+
+  padding-left: 65px;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 19px;
+    top: -3px;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid #cecece;
+    border-radius: 50%;
+
+    cursor: pointer;
+  }
+}
+
+.aim__input:checked + .aim__label {
+  &::before {
+    background: radial-gradient(circle, #68b738 0, #68b738 6px, #ffffff 6px);
+  }
+}
+
+.aim__input:hover + .aim__label,
+.aim__input:focus + .aim__label {
+  &::before {
+    border-color: #bcbcbc;
+  }
+}
+
+.aim__input:active + .aim__label,
+.aim__input:checked:active + .aim__label {
+  opacity: 0.3;
+
+  &::before {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .aim {
+    width: 629px;
+    margin: 0 auto 71px;
+    padding-left: 7px;
+
+    border: none;
+  }
+
+  .aim__list {
+    min-height: 196px;
+    padding-top: 34px;
+    padding-bottom: 33px;
+    margin-left: -7px;
+
+    border: 1px solid #ededed;
+  }
+
+  .aim__label {
+    @include form-label--tablet;
+    padding-left: 88px;
+
+    &::before {
+      left: 28px;
+      top: -6px;
+
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .aim__input:checked + .aim__label {
+    &::before {
+      background: radial-gradient(circle, #68b738 0, #68b738 9px, #ffffff 9px);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .aim {
+    width: 570px;
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 16px;
+  }
+
+
+  .aim__list {
+    padding-top: 36px;
+    padding-bottom: 31px;
+    margin-left: -17px;
+  }
+}

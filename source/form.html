@@ -6,7 +6,12 @@
   <title>CAT ENERGY</title>
   <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <script src="js/picturefill.js" async=""></script>
+  <link rel="preloader" href="js/main-menu.js" as="script" crossorigin="anonymous">
+  <link rel="preloader" href="js/main-menu.js" as="script" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldregular.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <body>
@@ -153,11 +158,13 @@
           <p class="page-footer__address">ул. Большая Конюшенная, д.&#160;19&#47;8 <span>Санкт-Петербург</span></p>
         </div>
       </div>
-      <div class="page-footer__map" id="map"></div>
+      <div class="page-footer__map">
+        <iframe src="https://www.google.com/maps/d/embed?mid=1q_15uyP5H1KlyAFEHQPpGh2_BMMGcs47" width="640" height="480"></iframe>
+      </div>
     </div>
     <div class="page-footer__footer container">
       <a class="page-footer__logo" href="index.html">
-        <img src="img/logo-footer.svg" width="128" height="24">
+        <img src="img/logo-footer.svg" width="128" height="24" alt="HTML academy">
       </a>
       <ul class="page-footer__social-list social">
         <li class="social__item social__item--vkontakte" aria-labelledby="Ссылка вконтакте">
@@ -180,10 +187,9 @@
     </div>
   </footer>
 
-  <script src="js/main-menu.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=trnsl.1.1.20191203T093233Z.876adae0eecb1c4a.3b101477798bbf787c0879cda5e043dc51e30855" type="text/javascript"></script>
-  <script src="js/map.js"></script>
-  <script src="js/form-validation.js"></script>
+  <script src="js/main-menu.min.js"></script>
+  <script src="js/picturefill.min.js" async=""></script>
+  <script src="js/form-validation.min.js"></script>
 </body>
 
 </html>

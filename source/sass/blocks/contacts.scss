@@ -1,0 +1,55 @@
+.contacts {
+  display: flex;
+  width: 320px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.contacts__invitation {
+  flex-basis: 50%;
+
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #212121;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    width: 708px;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 58px;
+  }
+
+  .contacts__invitation {
+    flex-basis: 180px;
+
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    position: absolute;
+    left: calc(50% - 610px);
+    top: 95px;
+    z-index: 2;
+
+    padding-top: 63px;
+    padding-left: 76px;
+    padding-right: 78px;
+    width: 570px;
+    min-height: 201px;
+
+    background-color: #ffffff;
+  }
+
+  .contacts__invitation {
+    padding-top: 4px;
+  }
+}

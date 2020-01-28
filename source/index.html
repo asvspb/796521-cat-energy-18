@@ -5,7 +5,11 @@
   <title>CAT ENERGY</title>
   <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <script src="js/picturefill.js" async=""></script>
+  <link rel="preloader" href="js/main-menu.js" as="script" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldregular.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <body>
@@ -64,11 +68,13 @@
       <ul class="catalog-section__list">
         <li class="catalog-section__item catalog-section__item--slim">
           <h3 class="catalog-section__title">ПОХУДЕНИЕ</h3>
+          <svg width="35" height="49" focusable="false" aria-hidden="true"><use xlink:href="#icon-cat-slim"></use></svg>
           <p class="catalog-section__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           <a class="catalog-section__link" href="каталог">Каталог Slim</a>
         </li>
         <li class="catalog-section__item catalog-section__item--fat">
           <h3 class="catalog-section__title">НАБОР МАССЫ</h3>
+          <svg width="67" height="28" focusable="false" aria-hidden="true"><use xlink:href="#icon-cat-pro"></use></svg>
           <p class="catalog-section__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
           <a class="catalog-section__link" href="каталог">Каталог pro</a>
         </li>
@@ -114,50 +120,49 @@
         </div>
         <form class="example__demonstration">
           <div class="example__live-image-wrapper">
-            <picture class="example__mobile-image">
-              <source type="image/webp" srcset="img/example/before-mobile@1x.webp 1x, img/example/before-mobile@2x.webp">
-              <img src="img/example/before-mobile@1x.png" srcset="img/example/before-mobile@2x.png 2x" id="before-mobile" width="320" height="240px">
-            </picture>
-            <picture class="example__mobile-image">
-                <source type="image/webp" srcset="img/example/after-mobile@1x.webp 1x, img/example/after-mobile@2x.webp">
-              <img class="jshidden" src="img/example/after-mobile@1x.png" srcset="img/example/after-mobile@2x.png 2x" id="after-mobile" width="320" height="240px">
-            </picture>
-            <picture class="example__tablet-image">
+            <picture>
               <source type="image/webp" media="(min-width: 1280px)" srcset="img/example/fat-left-desktop@1x.webp 1x, img/example/fat-left-desktop@2x.webp 2x">
-              <source type="image/webp" srcset="img/example/fat-left-tablet@1x.webp 1x, img/example/fat-left-tablet@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/example/fat-left-tablet@1x.webp 1x, img/example/fat-left-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/example/fat-left-mobile@1x.webp 1x, img/example/fat-left-mobile@2x.webp 2x">
 
               <source media="(min-width: 1280px)" srcset="img/example/fat-left-desktop@1x.png 1x, img/example/fat-left-desktop@2x.png 2x">
-              <img src="img/example/fat-left-tablet@1x.png" srcset="img/example/fat-left-tablet@2x.png 2x" id="fat-left" alt="Кот Борис">
+              <source media="(min-width: 768px)" srcset="img/example/fat-left-tablet@1x.png 1x, img/example/fat-left-tablet@2x.png 2x">
+              <img src="img/example/fat-left-mobile@1x.png" srcset="img/example/fat-left-mobile@2x.png 2x" id="fat-left" alt="Кот Борис" width="320" height="240">
             </picture>
 
-            <picture class="example__tablet-image">
+            <picture>
               <source type="image/webp" media="(min-width: 1280px)" srcset="img/example/slim-left-desktop@1x.webp 1x, img/example/slim-left-desktop@2x.webp 2x">
-              <source type="image/webp" srcset="img/example/slim-left-tablet@1x.webp 1x, img/example/slim-left-tablet@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/example/slim-left-tablet@1x.webp 1x, img/example/slim-left-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/example/slim-left-mobile@1x.webp 1x, img/example/slim-left-mobile@2x.webp 2x">
 
               <source media="(min-width: 1280px)" srcset="img/example/slim-left-desktop@1x.png 1x, img/example/slim-left-desktop@2x.png 2x">
-              <img class="jshidden" src="img/example/slim-left-tablet@1x.png" srcset="img/example/slim-left-tablet@2x.png 2x" id="slim-left" alt="Кот Борис">
+              <source media="(min-width: 768px)" srcset="img/example/slim-left-tablet@1x.png 1x, img/example/slim-left-tablet@2x.png 2x">
+              <img class="jshidden" src="img/example/slim-left-mobile@1x.png" srcset="img/example/slim-left-mobile@2x.png 2x" id="slim-left" alt="Кот Борис" width="320" height="240">
             </picture>
 
-            <picture class="example__tablet-image">
+            <picture>
               <source type="image/webp" media="(min-width: 1280px)" srcset="img/example/fat-right-desktop@1x.webp 1x, img/example/fat-right-desktop@2x.webp 2x">
-              <source type="image/webp" srcset="img/example/fat-right-tablet@1x.webp 1x, img/example/fat-right-tablet@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/example/fat-right-tablet@1x.webp 1x, img/example/fat-right-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/example/fat-right-mobile@1x.webp 1x, img/example/fat-right-mobile@2x.webp 2x">
 
               <source media="(min-width: 1280px)" srcset="img/example/fat-right-desktop@1x.png 1x, img/example/fat-right-desktop@2x.png 2x">
-              <img class="jshidden" src="img/example/fat-right-tablet@1x.png" srcset="img/example/fat-right-tablet@2x.png 2x" id="fat-right" alt="Кот Борис">
+              <source media="(min-width: 768px)" srcset="img/example/fat-right-tablet@1x.png 1x, img/example/fat-right-tablet@2x.png 2x">
+              <img src="img/example/fat-right-mobile@1x.png" srcset="img/example/fat-right-mobile@2x.png 2x" id="fat-right" alt="Кот Борис" width="320" height="240">
             </picture>
 
-            <picture class="example__tablet-image">
+            <picture>
               <source type="image/webp" media="(min-width: 1280px)" srcset="img/example/slim-right-desktop@1x.webp 1x, img/example/slim-right-desktop@2x.webp 2x">
-              <source type="image/webp" srcset="img/example/slim-right-tablet@1x.webp 1x, img/example/slim-right-tablet@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/example/slim-right-tablet@1x.webp 1x, img/example/slim-right-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/example/slim-right-mobile@1x.webp 1x, img/example/slim-right-mobile@2x.webp 2x">
 
               <source media="(min-width: 1280px)" srcset="img/example/slim-right-desktop@1x.png 1x, img/example/slim-right-desktop@2x.png 2x">
-              <img src="img/example/slim-right-tablet@1x.png" srcset="img/example/slim-right-tablet@2x.png 2x" id="slim-right" alt="Кот Борис">
+              <source media="(min-width: 768px)" srcset="img/example/slim-right-tablet@1x.png 1x, img/example/slim-right-tablet@2x.png 2x">
+              <img class="jshidden" src="img/example/slim-right-mobile@1x.png" srcset="img/example/slim-right-mobile@2x.png 2x" id="slim-right" alt="Кот Борис" width="320" height="240">
             </picture>
           </div>
           <label class="example__wrapper">
               <span>Было</span>
-              <input class="example__mobile-range" type="range" min="1" max="2" value="1" id="example_mobile_range">
-              <input class="example__range" type="range" min="1" max="3" value="2" id="expample_range">
+              <input class="example__range" type="range" min="1" max="2" value="1" id="expample_range">
               <span>Стало</span>
           </label>
         </form>
@@ -173,11 +178,13 @@
           <p class="page-footer__address">ул. Большая Конюшенная, д.&#160;19&#47;8 <span>Санкт-Петербург</span></p>
         </div>
       </div>
-      <div class="page-footer__map" id="map"></div>
+      <div class="page-footer__map">
+        <iframe src="https://www.google.com/maps/d/embed?mid=1q_15uyP5H1KlyAFEHQPpGh2_BMMGcs47" width="640" height="480"></iframe>
+      </div>
     </div>
     <div class="page-footer__footer container">
       <a class="page-footer__logo">
-        <img src="img/logo-footer.svg" width="128" height="24">
+        <img src="img/logo-footer.svg" width="128" height="24" alt="HTML academy">
       </a>
       <ul class="page-footer__social-list social">
         <li class="social__item social__item--vkontakte" aria-labelledby="Ссылка вконтакте">
@@ -200,11 +207,9 @@
     </div>
   </footer>
 
-  <script src="js/example.js"></script>
-  <script src="js/main-menu.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=trnsl.1.1.20191203T093233Z.876adae0eecb1c4a.3b101477798bbf787c0879cda5e043dc51e30855" type="text/javascript"></script>
-  <script src="js/map.js"></script>
-
+  <script src="js/example.min.js" ></script>
+  <script src="js/main-menu.min.js"></script>
+  <script src="js/picturefill.min.js" async=""></script>
 
 </body>
 

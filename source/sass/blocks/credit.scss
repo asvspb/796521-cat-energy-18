@@ -1,0 +1,48 @@
+.credit {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.credit__name {
+  padding-top: 0;
+
+  font-size: 16px;
+  line-height: 16px;
+  font-family: "Arial", sans-serif;
+  text-decoration: none;
+  color: #444444;
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.credit__logo svg {
+  fill: #666666;
+  width: 27px;
+  height: 34px;
+
+  &:hover,
+  &:focus {
+    fill: #68b738;
+  }
+
+  &:active {
+    fill: rgba(104, 183, 56, 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .credit {
+    width: 162px;
+    padding: 0;
+    margin-left: auto;
+  }
+}

@@ -84,7 +84,7 @@
       color: $color-subtitle-lighter;
     }
 
-    & .form-feedback__text-input:hover + svg {
+    & .form-feedback__text-input:focus + svg {
       color: $color-main;
     }
   }
@@ -116,6 +116,8 @@
 .form-feedback__submit {
   font-size: 16px;
   line-height: 1.25;
+  border: none;
+  outline: none;
 }
 
 .form-feedback__remark {
@@ -539,14 +541,16 @@
 
 .form-feedback .error {
   border-color: $color-error;
-  border-width: 2px;
+  box-shadow: 1px 1px 0 0 $color-error, -1px -1px 0 0 $color-error;
 
   &:hover {
-    border-color: $color-error;
+    border-color: $color-text;
+    box-shadow: 1px 1px 0 0 $color-text, -1px -1px 0 0 $color-text;
   }
 
   &:focus {
-    border-color: $color-error;
+    border-color: $color-text;
+    box-shadow: 1px 1px 0 0 $color-text, -1px -1px 0 0 $color-text;
   }
 
   & + svg {

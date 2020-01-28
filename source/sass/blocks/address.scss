@@ -1,0 +1,37 @@
+.address {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.address__street,
+.address__city {
+  @include zero-indent;
+
+  line-height: 20px;
+  font-family: "Arial", sans-serif;
+  color: #444444;
+}
+
+@media (min-width: $tablet-width) {
+  .address {
+    flex-basis: 165px;
+  }
+
+  .address__street,
+  .address__city {
+    font-size: 16px;
+    text-align: right;
+  }
+
+  .address__street {
+    margin-bottom: 19px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .address__street,
+  .address__city {
+    text-align: left;
+  }
+}
