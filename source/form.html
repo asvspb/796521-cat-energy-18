@@ -3,10 +3,15 @@
 
 <head>
   <meta charset="utf-8">
-  <title>CAT ENERGY</title>
+  <title>CAT ENERGY - Заказы</title>
   <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <script src="js/picturefill.js" async=""></script>
+  <link rel="preload" href="js/main-menu.js" as="script" crossorigin="anonymous">
+  <link rel="preload" href="js/main-menu.js" as="script" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldregular.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 </head>
 
 <body>
@@ -52,7 +57,7 @@
     <form class="page-main__form form-feedback" action="https://echo.htmlacademy.ru" method="get">
       <div class="container form-feedback__header-container">
         <fieldset class="form-feedback__group-parameters form-feedback__group-parameters--cat">
-          <ul role="none" class="form-feedback__list">
+          <ul class="form-feedback__list">
             <li class="form-feedback__item">
               <label class="form-feedback__text-label" for="name">Имя:<sup>*</sup></label>
               <input class="form-feedback__text-input required" type="text" name="name" id="name" required="" tabindex="1" placeholder="Барсик">
@@ -69,7 +74,7 @@
         </fieldset>
 
         <fieldset class="form-feedback__group-parameters form-feedback__group-parameters--main-parameters">
-          <ul role="none" class="form-feedback__list">
+          <ul class="form-feedback__list">
             <li class="form-feedback__item">
               <input class="visually-hidden" type="radio" name="mission" value="slim" id="slim" tabindex="4" checked="">
               <label class="form-feedback__radio-button" for="slim">Похудение</label>
@@ -91,7 +96,7 @@
         <div class="page-main__subtitle-wrapper container">
           <legend class="page-main__subtitle">Контактные данные (владельца кота)</legend>
         </div>
-        <ul role="none" class="form-feedback__list container">
+        <ul class="form-feedback__list container">
           <li class="form-feedback__item">
             <label class="form-feedback__text-label" for="email">E-mail:<sup>*</sup></label>
             <input class="form-feedback__text-input form-feedback__text-input--email required" type="email" name="email" id="email" required="" tabindex="7" placeholder="kuklachev@gmail.com">
@@ -118,7 +123,7 @@
         <div class="page-main__subtitle-wrapper container">
           <legend class="page-main__subtitle">Дополнительно</legend>
         </div>
-        <ul role="none" class="form-feedback__list container">
+        <ul class="form-feedback__list container">
           <li class="form-feedback__item">
             <input class="visually-hidden" type="checkbox" name="sweetener" id="sweetener" tabindex="10" checked="">
             <label class="form-feedback__checkbox-button" for="sweetener">Сахарозаменитель</label>
@@ -153,37 +158,38 @@
           <p class="page-footer__address">ул. Большая Конюшенная, д.&#160;19&#47;8 <span>Санкт-Петербург</span></p>
         </div>
       </div>
-      <div class="page-footer__map" id="map"></div>
+      <div class="page-footer__map">
+        <iframe src="https://www.google.com/maps/d/embed?mid=1q_15uyP5H1KlyAFEHQPpGh2_BMMGcs47" width="640" height="480"></iframe>
+      </div>
     </div>
     <div class="page-footer__footer container">
       <a class="page-footer__logo" href="index.html">
-        <img src="img/logo-footer.svg" width="128" height="24">
+        <img src="img/logo-footer.svg" width="128" height="24" alt="HTML academy">
       </a>
       <ul class="page-footer__social-list social">
-        <li class="social__item social__item--vkontakte" aria-labelledby="Ссылка вконтакте">
+        <li class="social__item social__item--vkontakte" >
           <a class="social__link" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
           <svg width="22" height="12" focusable="false" aria-hidden="true" fill="currentColor"><use xlink:href="#icon-vk"></use></svg>
         </li>
-        <li class="social__item social__item--instagram" aria-labelledby="Ссылка инстаграмм">
+        <li class="social__item social__item--instagram" >
           <a class="social__link" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
           <svg width="17" height="17" focusable="false" aria-hidden="true" fill="currentColor"><use xlink:href="#icon-insta"></use></svg>
         </li>
-        <li class="social__item social__item--facebook" aria-labelledby="Ссылка фэйсбук">
+        <li class="social__item social__item--facebook" >
           <a class="social__link" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
           <svg width="10" height="19" focusable="false" aria-hidden="true" fill="currentColor"><use xlink:href="#icon-fb"></use></svg>
         </li>
       </ul>
-      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-labelledby="Ссылка HTML academy">
+      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
         <span>HTML Academy</span>
         <svg width="27" height="34" focusable="false" fill="currentColor"><use xlink:href="#icon-htmlacademy"></use></svg>
       </a>
     </div>
   </footer>
 
-  <script src="js/main-menu.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=trnsl.1.1.20191203T093233Z.876adae0eecb1c4a.3b101477798bbf787c0879cda5e043dc51e30855" type="text/javascript"></script>
-  <script src="js/map.js"></script>
-  <script src="js/form-validation.js"></script>
+  <script src="js/main-menu.min.js"></script>
+  <script src="js/picturefill.min.js" async=""></script>
+  <script src="js/form-validation.min.js"></script>
 </body>
 
 </html>
