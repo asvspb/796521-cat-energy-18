@@ -6,7 +6,7 @@
   <title>CAT ENERGY - Каталог</title>
   <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="preloader" href="js/main-menu.js" as="script" crossorigin="anonymous">
+  <link rel="preload" href="js/main-menu.js" as="script" crossorigin="anonymous">
   <link rel="preload" href="fonts/oswaldmedium.woff" as="font" type="font/woff" crossorigin="anonymous">
   <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/oswaldregular.woff" as="font" type="font/woff" crossorigin="anonymous">
@@ -15,7 +15,7 @@
 
 <body>
 
-  <div style="display: none;">
+  <div class="visually-hidden">
     <include src="build/img/svg/sprite.svg"></include>
   </div>
 
@@ -329,7 +329,7 @@
         </div>
       </div>
       <div class="page-footer__map">
-        <iframe src="https://www.google.com/maps/d/embed?mid=1q_15uyP5H1KlyAFEHQPpGh2_BMMGcs47" width="640" height="480"></iframe>
+        <iframe src="https://www.google.com/maps/d/embed?mid=1q_15uyP5H1KlyAFEHQPpGh2_BMMGcs47" width="640" height="480" title="map"></iframe>
       </div>
     </div>
     <div class="page-footer__footer container">
@@ -337,27 +337,27 @@
         <img src="img/logo-footer.svg" width="128" height="24" alt="HTML academy">
       </a>
       <ul class="page-footer__social-list social">
-        <li class="social__item social__item--vkontakte" aria-labelledby="Ссылка вконтакте">
+        <li class="social__item social__item--vkontakte">
           <a class="social__link" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
           <svg width="22" height="12" focusable="false" aria-hidden="true" fill="currentColor"><use xlink:href="#icon-vk"></use></svg>
         </li>
-        <li class="social__item social__item--instagram" aria-labelledby="Ссылка инстаграмм">
+        <li class="social__item social__item--instagram">
           <a class="social__link" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
           <svg width="17" height="17" focusable="false" aria-hidden="true" fill="currentColor"><use xlink:href="#icon-insta"></use></svg>
         </li>
-        <li class="social__item social__item--facebook" aria-labelledby="Ссылка фэйсбук">
+        <li class="social__item social__item--facebook">
           <a class="social__link" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
           <svg width="10" height="19" focusable="false" aria-hidden="true" fill="currentColor"><use xlink:href="#icon-fb"></use></svg>
         </li>
       </ul>
-      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-labelledby="Ссылка HTML academy">
+      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
         <span>HTML Academy</span>
         <svg width="27" height="34" focusable="false" fill="currentColor"><use xlink:href="#icon-htmlacademy"></use></svg>
       </a>
     </div>
   </footer>
 
-  <script src="js/picturefill.min.js" async=""></script>
+  <script src="js/picturefill.min.js"></script>
   <script src="js/main-menu.min.js"></script>
 
 </body>

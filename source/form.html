@@ -6,8 +6,8 @@
   <title>CAT ENERGY - Заказы</title>
   <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="preloader" href="js/main-menu.js" as="script" crossorigin="anonymous">
-  <link rel="preloader" href="js/main-menu.js" as="script" crossorigin="anonymous">
+  <link rel="preload" href="js/main-menu.js" as="script" crossorigin="anonymous">
+  <link rel="preload" href="js/main-menu.js" as="script" crossorigin="anonymous">
   <link rel="preload" href="fonts/oswaldmedium.woff" as="font" type="font/woff" crossorigin="anonymous">
   <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/oswaldregular.woff" as="font" type="font/woff" crossorigin="anonymous">
@@ -57,7 +57,7 @@
     <form class="page-main__form form-feedback" action="https://echo.htmlacademy.ru" method="get">
       <div class="container form-feedback__header-container">
         <fieldset class="form-feedback__group-parameters form-feedback__group-parameters--cat">
-          <ul role="none" class="form-feedback__list">
+          <ul class="form-feedback__list">
             <li class="form-feedback__item">
               <label class="form-feedback__text-label" for="name">Имя:<sup>*</sup></label>
               <input class="form-feedback__text-input required" type="text" name="name" id="name" required="" tabindex="1" placeholder="Барсик">
@@ -74,7 +74,7 @@
         </fieldset>
 
         <fieldset class="form-feedback__group-parameters form-feedback__group-parameters--main-parameters">
-          <ul role="none" class="form-feedback__list">
+          <ul class="form-feedback__list">
             <li class="form-feedback__item">
               <input class="visually-hidden" type="radio" name="mission" value="slim" id="slim" tabindex="4" checked="">
               <label class="form-feedback__radio-button" for="slim">Похудение</label>
@@ -96,7 +96,7 @@
         <div class="page-main__subtitle-wrapper container">
           <legend class="page-main__subtitle">Контактные данные (владельца кота)</legend>
         </div>
-        <ul role="none" class="form-feedback__list container">
+        <ul class="form-feedback__list container">
           <li class="form-feedback__item">
             <label class="form-feedback__text-label" for="email">E-mail:<sup>*</sup></label>
             <input class="form-feedback__text-input form-feedback__text-input--email required" type="email" name="email" id="email" required="" tabindex="7" placeholder="kuklachev@gmail.com">
@@ -123,7 +123,7 @@
         <div class="page-main__subtitle-wrapper container">
           <legend class="page-main__subtitle">Дополнительно</legend>
         </div>
-        <ul role="none" class="form-feedback__list container">
+        <ul class="form-feedback__list container">
           <li class="form-feedback__item">
             <input class="visually-hidden" type="checkbox" name="sweetener" id="sweetener" tabindex="10" checked="">
             <label class="form-feedback__checkbox-button" for="sweetener">Сахарозаменитель</label>
@@ -167,20 +167,20 @@
         <img src="img/logo-footer.svg" width="128" height="24" alt="HTML academy">
       </a>
       <ul class="page-footer__social-list social">
-        <li class="social__item social__item--vkontakte" aria-labelledby="Ссылка вконтакте">
+        <li class="social__item social__item--vkontakte" >
           <a class="social__link" href="https://vk.com/htmlacademy">Мы в Вконтакте</a>
           <svg width="22" height="12" focusable="false" aria-hidden="true" fill="currentColor"><use xlink:href="#icon-vk"></use></svg>
         </li>
-        <li class="social__item social__item--instagram" aria-labelledby="Ссылка инстаграмм">
+        <li class="social__item social__item--instagram" >
           <a class="social__link" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
           <svg width="17" height="17" focusable="false" aria-hidden="true" fill="currentColor"><use xlink:href="#icon-insta"></use></svg>
         </li>
-        <li class="social__item social__item--facebook" aria-labelledby="Ссылка фэйсбук">
+        <li class="social__item social__item--facebook" >
           <a class="social__link" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
           <svg width="10" height="19" focusable="false" aria-hidden="true" fill="currentColor"><use xlink:href="#icon-fb"></use></svg>
         </li>
       </ul>
-      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-labelledby="Ссылка HTML academy">
+      <a class="page-footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
         <span>HTML Academy</span>
         <svg width="27" height="34" focusable="false" fill="currentColor"><use xlink:href="#icon-htmlacademy"></use></svg>
       </a>
