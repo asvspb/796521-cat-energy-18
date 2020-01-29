@@ -25,12 +25,12 @@
   &:not(:last-of-type) {
     margin-bottom: 15px;
   }
+}
 
-  & input[type="text"],
-  input[type="email"],
-  input[type="tel"] {
-    flex-grow: 1;
-  }
+.form-feedback__item input[type="text"],
+.form-feedback__item input[type="email"],
+.form-feedback__item input[type="tel"] {
+  flex-grow: 1;
 }
 
 .form-feedback__group-parameters {
@@ -62,48 +62,61 @@
 
   &--owner {
     margin-top: 41px;
-
-    & .form-feedback__list {
-      margin-top: 16px;
-    }
-
-    & .page-main__subtitle {
-      max-width: 225px;
-    }
-
-    & .form-feedback__item {
-      position: relative;
-    }
-
-    & svg {
-      position: absolute;
-      right: 15px;
-    }
-
-    & .form-feedback__text-input + svg {
-      color: $color-subtitle-lighter;
-    }
-
-    & .form-feedback__text-input:focus + svg {
-      color: $color-main;
-    }
   }
 
   &--comment {
-    margin-top: 43px;
+    margin-top: 41px;
   }
 
   &--additionally {
     margin-top: 44px;
-
-    & .form-feedback__list {
-      margin-top: 16px;
-    }
-
-    & .form-feedback__item {
-      margin-bottom: 12px;
-    }
   }
+}
+
+.form-feedback__group-parameters--owner .form-feedback__list {
+  margin-top: 16px;
+}
+
+.form-feedback__group-parameters--owner .page-main__subtitle {
+  max-width: 182px;
+}
+
+.form-feedback__group-parameters--owner .form-feedback__item {
+  position: relative;
+}
+
+.form-feedback__group-parameters--owner svg {
+  position: absolute;
+}
+
+.form-feedback__group-parameters--owner .form-feedback__text-label {
+  margin-right: 15px;
+}
+
+.form-feedback__text-input--email + svg {
+  top: 15px;
+  right: 15px;
+}
+
+.form-feedback__text-input--phone + svg {
+  top: 12px;
+  right: 11px;
+}
+
+.form-feedback__group-parameters--owner .form-feedback__text-input + svg {
+  color: $color-subtitle-lighter;
+}
+
+.form-feedback__group-parameters--owner .form-feedback__text-input:focus + svg {
+  color: $color-main;
+}
+
+.form-feedback__group-parameters--additionally .form-feedback__list {
+  margin-top: 16px;
+}
+
+.form-feedback__group-parameters--additionally .form-feedback__item {
+  margin-bottom: 12px;
 }
 
 .form-feedback__footer {
@@ -124,7 +137,7 @@
   margin-top: 20px;
 
   @include text-parameter(14px, 1.14, $color-text, 400);
-  font-family: $secondary-font;
+  font-family: $secondary-font, $third-font, sans-serif;
   align-self: center;
 }
 
@@ -136,14 +149,6 @@
       padding-bottom: 2px;
       margin-right: 67px;
       margin-left: 71px;
-
-      & .form-feedback__list {
-        padding-left: 27px;
-      }
-
-      & .form-feedback__item {
-        margin-bottom: 23px;
-      }
     }
 
     &--cat {
@@ -152,18 +157,6 @@
 
     &--owner {
       margin-top: 97px;
-
-      & .page-main__subtitle {
-        max-width: 100%;
-      }
-
-      & .form-feedback__list {
-        margin-top: 51px;
-      }
-
-      & svg {
-        right: 17px;
-      }
     }
 
     &--comment {
@@ -172,19 +165,47 @@
 
     &--additionally {
       margin-top: 87px;
-
-      & .form-feedback__list {
-        margin-top: 43px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-
-      & .form-feedback__item {
-        margin-bottom: 41px;
-        flex-basis: 292px;
-      }
     }
+  }
+
+  .form-feedback__group-parameters--main-parameters .form-feedback__list {
+    padding-left: 27px;
+  }
+
+  .form-feedback__group-parameters--main-parameters .form-feedback__item {
+    margin-bottom: 23px;
+  }
+
+  .form-feedback__group-parameters--owner .page-main__subtitle {
+    max-width: 100%;
+  }
+
+  .form-feedback__group-parameters--owner .form-feedback__list {
+    margin-top: 51px;
+  }
+
+  .form-feedback__group-parameters--owner svg {
+    right: 17px;
+  }
+
+  .form-feedback__text-input--email + svg {
+    top: 20px;
+  }
+
+  .form-feedback__text-input--phone + svg {
+    top: 17px;
+  }
+
+  .form-feedback__group-parameters--additionally .form-feedback__list {
+    margin-top: 43px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form-feedback__group-parameters--additionally .form-feedback__item {
+    margin-bottom: 41px;
+    flex-basis: 292px;
   }
 
   .form-feedback__footer {
@@ -220,17 +241,6 @@
   .form-feedback__group-parameters {
     &--cat {
       margin-top: 0;
-
-      & .form-feedback__list {
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-right: 0;
-        padding-left: 0;
-      }
-
-      & .form-feedback__item {
-        margin-bottom: 16px;
-      }
     }
 
     &--main-parameters {
@@ -242,29 +252,46 @@
 
     &--owner {
       margin-top: 73px;
-
-      & .form-feedback__list {
-        display: flex;
-        justify-content: space-between;
-      }
-
-      & .form-feedback__item {
-        flex-shrink: 0;
-        flex-basis: 570px;
-        margin-bottom: 0;
-      }
-
-      & svg {
-        right: 20px;
-      }
     }
+  }
 
-    &--additionally {
-      & .form-feedback__item {
-        margin-bottom: 0;
-        flex-basis: 249px;
-      }
-    }
+  .form-feedback__group-parameters--cat .form-feedback__list {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .form-feedback__group-parameters--cat .form-feedback__item {
+    margin-bottom: 16px;
+  }
+
+  .form-feedback__group-parameters--owner .form-feedback__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form-feedback__group-parameters--owner .form-feedback__item {
+    flex-shrink: 0;
+    flex-basis: 570px;
+    margin-bottom: 0;
+  }
+
+  .form-feedback__group-parameters--owner svg {
+    right: 20px;
+  }
+
+  .form-feedback__text-input--email + svg {
+    top: 19px;
+  }
+
+  .form-feedback__text-input--phone + svg {
+    top: 19px;
+  }
+
+  .form-feedback__group-parameters--additionally .form-feedback__item {
+    margin-bottom: 0;
+    flex-basis: 249px;
   }
 
   .form-feedback__group-parameters--cat,
@@ -288,7 +315,18 @@
 .form-feedback__text-label {
   @include text-parameter(16px, 1.13, $color-subtitle-lighter, 400);
   text-transform: uppercase;
-  margin-right: 15px;
+
+  &--name {
+    margin-right: 16px;
+  }
+
+  &--weight {
+    margin-right: 19px;
+  }
+
+  &--age {
+    margin-right: 11px;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -304,7 +342,7 @@
   padding-left: 15px;
   border: 1px solid $color-border;
   text-transform: uppercase;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $main-font, $secondary-font, sans-serif;
 
   @include text-parameter(16px, 1.13, $color-text, 400);
   outline: none;
@@ -374,6 +412,24 @@
 
 .form-feedback input:checked + .form-feedback__radio-button::after {
   display: inline-block;
+}
+
+.form-feedback input:disabled + .form-feedback__radio-button::before,
+.form-feedback input:disabled + .form-feedback__radio-button::after {
+  opacity: 0.3;
+}
+
+.form-feedback input:disabled + .form-feedback__radio-button:hover::before {
+  border-color: $color-border;
+  cursor: default;
+}
+
+.form-feedback__radio-button:focus {
+  outline: none;
+
+  &::before {
+    border-color: $color-text;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -447,6 +503,23 @@
   display: inline-block;
 }
 
+.form-feedback input:disabled + .form-feedback__checkbox-button::after,
+.form-feedback input:disabled + .form-feedback__checkbox-button::before {
+  opacity: 0.3;
+}
+
+.form-feedback input:disabled + .form-feedback__checkbox-button:hover::before {
+  cursor: default;
+}
+
+.form-feedback__checkbox-button:focus {
+  outline: none;
+
+  &::before {
+    border-color: $color-text;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .form-feedback__checkbox-button {
     @include text-parameter(20px, 1, $color-subtitle-lighter, 400);
@@ -475,7 +548,6 @@
   }
 }
 
-
 .form-feedback__comment-container {
   display: flex;
   margin-top: 16px;
@@ -490,14 +562,15 @@
   padding-left: 12px;
   resize: none;
   outline: none;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: $main-font, $secondary-font, sans-serif;
   min-height: 123px;
-  border-color: $color-border;
+  border: 1px solid $color-border;
+  text-transform: uppercase;
 
   @include text-parameter(16px, 1.13, $color-text, 400);
 
   &::placeholder {
-    font-family: "Oswald", "Arial", sans-serif;
+    font-family: $main-font, $secondary-font, sans-serif;
     text-transform: uppercase;
 
     @include text-parameter(16px, 1.13, $color-text, 400);
@@ -510,7 +583,7 @@
 
   &:focus {
     border-color: $color-text;
-    border-width: 2px;
+    box-shadow: 1px 1px 0 0 $color-text, -1px -1px 0 0 $color-text;
   }
 }
 
@@ -552,12 +625,12 @@
     border-color: $color-text;
     box-shadow: 1px 1px 0 0 $color-text, -1px -1px 0 0 $color-text;
   }
+}
 
-  & + svg {
-    color: $color-error;
-  }
+.form-feedback .error + svg {
+  color: $color-error;
+}
 
-  &:hover + svg {
-    color: $color-error;
-  }
+.form-feedback .error:hover + svg {
+  color: $color-error;
 }

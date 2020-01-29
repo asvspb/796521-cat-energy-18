@@ -1,0 +1,13 @@
+.order {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 200px;
+  height: 200px;
+  background: $color-main;
+  z-index: 99;
+}
+
+.order.hidden {
+  display: none;
+}

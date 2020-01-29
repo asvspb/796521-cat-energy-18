@@ -31,7 +31,7 @@
 
 .additional-product__characteristic {
   @include text-parameter(16px, 1.25, $color-text, 400);
-  font-family: $secondary-font;
+  font-family: $secondary-font, $third-font, sans-serif;
   width: 100%;
 }
 
@@ -54,8 +54,9 @@
   }
 
   .additional-product__characteristic {
-    min-width: 100px;
+    min-width: 90px;
     text-align: right;
+    padding-top: 2px;
   }
 
   .additional-product__description {
@@ -64,7 +65,7 @@
   }
 
   .additional-product__button {
-    margin-top: 25px;
+    margin-top: 24px;
   }
 }
 
@@ -77,13 +78,15 @@
     padding: 15px 0;
   }
 
-  .additional-product__characteristic:first-child {
-    text-align: left;
-    width: 150px;
-  }
+  .additional-product__characteristic {
+    &:first-child {
+      text-align: left;
+      width: 150px;
+    }
 
-  .additional-product__characteristic:last-child {
-    width: 130px;
+    &:last-child {
+      width: 130px;
+    }
   }
 
   .additional-product__title {
@@ -125,7 +128,7 @@
 
 .additional-product__action_title {
   @include text-parameter(16px, 1.25, $color-element, 400);
-  font-family: $secondary-font;
+  font-family: $secondary-font, $third-font, sans-serif;
   margin-bottom: 0;
   padding-top: 43px;
   text-align: center;
