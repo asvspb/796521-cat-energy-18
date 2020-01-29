@@ -1,8 +1,9 @@
-@import "variables.scss";
-@import "normalize.scss";
-@import "mixin.scss";
-@import "fonts.scss";
-@import "scafolding.scss";
+@import "feat/variables.scss";
+@import "feat/normalize.scss";
+@import "feat/mixins.scss";
+@import "feat/fonts.scss";
+@import "feat/base.scss";
+@import "feat/visually-hidden.scss";
 @import "blocks/about-product.scss";
 @import "blocks/button.scss";
 @import "blocks/catalog-section.scss";
