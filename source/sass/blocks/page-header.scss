@@ -74,6 +74,7 @@
 
 .page-header__preview-title {
   @include text-parameter(36px, 1, $color-element, 400);
+  width: 420px;
   margin-top: 28px;
   margin-bottom: 20px;
   text-align: center;
